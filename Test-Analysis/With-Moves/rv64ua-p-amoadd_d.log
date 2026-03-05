@@ -1,0 +1,379 @@
+Running: /home/alice/Cambridge/PartII/Project/Forked-Repo/Toooba/Tests/elf_to_hex/elf_to_hex /home/alice/Cambridge/PartII/Project/Forked-Repo/Toooba/Tests/isa/rv64ua-p-amoadd_d Mem.hex
+Finished with exit code 0
+Stdout:
+c_mem_load_elf: /home/alice/Cambridge/PartII/Project/Forked-Repo/Toooba/Tests/isa/rv64ua-p-amoadd_d is a 64-bit ELF file
+Section .text.init      : addr         80000000 to addr         800001c4; size 0x     1c4 (= 452) bytes
+Section .tohost         : addr         80001000 to addr         80001048; size 0x      48 (= 72) bytes
+Section .bss            : addr         80002000 to addr         80002008; size 0x       8 (= 8) bytes
+Section .riscv.attributes: Ignored
+Section .symtab         : Searching for addresses of '_start', 'exit' and 'tohost' symbols
+Writing symbols to:    symbol_table.txt
+    No 'exit' label found
+Section .strtab         : Ignored
+Section .shstrtab       : Ignored
+Min addr:                    80000000 (hex)
+Max addr:                    80002007 (hex)
+Writing mem hex to file 'Mem.hex'
+Subtracting 0x80000000 base from addresses
+Running: /home/alice/Cambridge/PartII/Project/Forked-Repo/Toooba/builds/RV64ACDFIMSUxCHERI_Toooba_bluesim/exe_HW_sim +tohost
+Finished with exit code 0
+Stdout:
+Warning: file 'Mem.hex' for memory 'rf' has a gap at addresses 257 to 33554430.
+mkProc came out of reset
+c_get_symbol: could not find value for symbol fromhost
+1: top.soc_top.rl_reset_start_initial ...
+11: Mem_Controller.set_addr_map: addr_base 0x80000000 addr_lim 0xc0000000
+  SoC address map:
+  Boot ROM:        0x1000 .. 0x2000
+  Mem0 Controller: 0x80000000 .. 0xc0000000
+  UART0:           0xc0000000 .. 0xc0000080
+11: top.soc_top.rl_reset_complete_initial
+================================================================
+Bluespec RISC-V standalone system simulation v1.2
+Copyright (c) 2017-2019 Bluespec, Inc. All Rights Reserved.
+================================================================
+INFO: watch_tohost 1, tohost_addr = 0x80001000, fromhost_addr = 0x0
+12: top.soc_top.method start (tohost 80001000, fromhost 0)
+100: top.soc_top.rl_step_0, n = 0, do_release
+100: top.soc_top do_release(restartRunning: True, to_host_addr: 0)
+100: top.soc_top.corew_proc.method start: startpc 1000, tohostAddr 0, fromhostAddr 0
+101: top.soc_top.rl_ctrl_req
+101: top.soc_top.corew_proc.method start: startpc 1000, tohostAddr 80001000, fromhostAddr 0
+101: top.soc_top do_release(restartRunning: True, to_host_addr: 80001000)
+in-flight renaming arch_reg 69 to phy_reg 64, isMove: 0
+in-flight renaming arch_reg 75 to phy_reg 65, isMove: 0
+instret:0  PC:0x1ffff0000000000000000000000001000  instr:0x00000297   iType:Auipc    [doCommitNormalInst [0]]        167
+Committing phy_reg: 64, to arch_reg: 5
+Freeing phy_reg: 5
+instret:1  PC:0x1ffff0000000000000000000000001004  instr:0x02028593   iType:Alu    [doCommitNormalInst [0]]        168
+Committing phy_reg: 65, to arch_reg: 11
+Freeing phy_reg: 11
+in-flight renaming arch_reg 74 to phy_reg 66, isMove: 0
+instret:2  PC:0x1ffff0000000000000000000000001008  instr:0xf1402573   iType:Csr    [doCommitSystemInst]        224
+Committing phy_reg: 66, to arch_reg: 10
+Freeing phy_reg: 10
+in-flight renaming arch_reg 69 to phy_reg 67, isMove: 0
+in-flight renaming arch_reg 0 to phy_reg 68, isMove: 0
+instret:3  PC:0x1ffff000000000000000000000000100c  instr:0x0182b283   iType:Ld    [doCommitNormalInst [0]]        403
+Committing phy_reg: 67, to arch_reg: 5
+Freeing phy_reg: 64
+instret:4  PC:0x1ffff0000000000000000000000001010  instr:0x00028067   iType:Jr    [doCommitNormalInst [0]]        408
+Freeing phy_reg: 68
+in-flight renaming arch_reg 0 to phy_reg 69, isMove: 0
+instret:5  PC:0x1ffff0000000000000000000080000000  instr:0x04c0006f   iType:J    [doCommitNormalInst [0]]       1155
+Freeing phy_reg: 69
+in-flight renaming arch_reg 74 to phy_reg 70, isMove: 0
+instret:6  PC:0x1ffff000000000000000000008000004c  instr:0xf1402573   iType:Csr    [doCommitSystemInst]       1209
+Committing phy_reg: 70, to arch_reg: 10
+Freeing phy_reg: 66
+in-flight renaming arch_reg 0 to phy_reg 71, isMove: 0
+in-flight renaming arch_reg 69 to phy_reg 72, isMove: 0
+in-flight renaming arch_reg 69 to phy_reg 73, isMove: 0
+instret:7  PC:0x1ffff0000000000000000000080000050  instr:0x00051063   iType:Br    [doCommitNormalInst [0]]       1221
+instret:8  PC:0x1ffff0000000000000000000080000054  instr:0x00000297   iType:Auipc    [doCommitNormalInst [1]]       1221
+Freeing phy_reg: 71
+Committing phy_reg: 72, to arch_reg: 5
+Freeing phy_reg: 67
+instret:9  PC:0x1ffff0000000000000000000080000058  instr:0x01028293   iType:Alu    [doCommitNormalInst [0]]       1222
+Committing phy_reg: 73, to arch_reg: 5
+Freeing phy_reg: 72
+in-flight renaming arch_reg 0 to phy_reg 74, isMove: 0
+instret:10  PC:0x1ffff000000000000000000008000005c  instr:0x30529073   iType:Scr    [doCommitSystemInst]       1228
+Freeing phy_reg: 74
+in-flight renaming arch_reg 0 to phy_reg 75, isMove: 0
+instret:11  PC:0x1ffff0000000000000000000080000060  instr:0x18005073   iType:Csr    [doCommitSystemInst]       1280
+Freeing phy_reg: 75
+in-flight renaming arch_reg 69 to phy_reg 76, isMove: 0
+in-flight renaming arch_reg 69 to phy_reg 77, isMove: 0
+instret:12  PC:0x1ffff0000000000000000000080000064  instr:0x00000297   iType:Auipc    [doCommitNormalInst [0]]       1555
+Committing phy_reg: 76, to arch_reg: 5
+Freeing phy_reg: 73
+instret:13  PC:0x1ffff0000000000000000000080000068  instr:0x02428293   iType:Alu    [doCommitNormalInst [0]]       1556
+Committing phy_reg: 77, to arch_reg: 5
+Freeing phy_reg: 76
+in-flight renaming arch_reg 0 to phy_reg 78, isMove: 0
+instret:14  PC:0x1ffff000000000000000000008000006c  instr:0x30529073   iType:Scr    [doCommitSystemInst]       1562
+Freeing phy_reg: 78
+in-flight renaming arch_reg 69 to phy_reg 79, isMove: 0
+in-flight renaming arch_reg 69 to phy_reg 80, isMove: 0
+in-flight renaming arch_reg 69 to phy_reg 81, isMove: 0
+instret:15  PC:0x1ffff0000000000000000000080000070  instr:0x0010029b   iType:Alu    [doCommitNormalInst [0]]       1574
+Committing phy_reg: 79, to arch_reg: 5
+Freeing phy_reg: 77
+instret:16  PC:0x1ffff0000000000000000000080000074  instr:0x03529293   iType:Alu    [doCommitNormalInst [0]]       1575
+Committing phy_reg: 80, to arch_reg: 5
+Freeing phy_reg: 79
+instret:17  PC:0x1ffff0000000000000000000080000078  instr:0xfff28293   iType:Alu    [doCommitNormalInst [0]]       1576
+Committing phy_reg: 81, to arch_reg: 5
+Freeing phy_reg: 80
+instret:18  PC:0x1ffff000000000000000000008000007c  instr:0x3b029073  iType:Csr    [doCommitTrap]       1578
+in-flight renaming arch_reg 69 to phy_reg 82, isMove: 0
+in-flight renaming arch_reg 69 to phy_reg 83, isMove: 0
+instret:19  PC:0x1ffff0000000000000000000080000088  instr:0x00000297   iType:Auipc    [doCommitNormalInst [0]]       1591
+Committing phy_reg: 82, to arch_reg: 5
+Freeing phy_reg: 81
+instret:20  PC:0x1ffff000000000000000000008000008c  instr:0x01828293   iType:Alu    [doCommitNormalInst [0]]       1592
+Committing phy_reg: 83, to arch_reg: 5
+Freeing phy_reg: 82
+in-flight renaming arch_reg 0 to phy_reg 84, isMove: 0
+instret:21  PC:0x1ffff0000000000000000000080000090  instr:0x30529073   iType:Scr    [doCommitSystemInst]       1598
+Freeing phy_reg: 84
+in-flight renaming arch_reg 0 to phy_reg 85, isMove: 0
+instret:22  PC:0x1ffff0000000000000000000080000094  instr:0x30205073   iType:Csr    [doCommitSystemInst]       1651
+Freeing phy_reg: 85
+in-flight renaming arch_reg 0 to phy_reg 86, isMove: 0
+instret:23  PC:0x1ffff0000000000000000000080000098  instr:0x30305073   iType:Csr    [doCommitSystemInst]       1663
+Freeing phy_reg: 86
+in-flight renaming arch_reg 0 to phy_reg 87, isMove: 0
+instret:24  PC:0x1ffff000000000000000000008000009c  instr:0x30405073   iType:Csr    [doCommitSystemInst]       1675
+Freeing phy_reg: 87
+effective move :)DecodedInst { iType: Alu, execFunc: tagged Alu Add, capFunc: tagged Other , capChecks: CapChecks {rn1 'h00, rn2 'h00}, csr: tagged Invalid , scr: tagged Invalid , imm: tagged Valid 'h00000000 }ArchRegs { src1: tagged Valid tagged Gpr 'h00, src2: tagged Invalid , src3: tagged Invalid , dst: tagged Valid tagged Gpr 'h03 }
+in-flight renaming arch_reg 67 to phy_reg 0, isMove: 1
+in-flight renaming arch_reg 69 to phy_reg 88, isMove: 0
+instret:25  PC:0x1ffff00000000000000000000800000a0  instr:0x00000193   iType:Alu    [doCommitNormalInst [0]]       1683
+Committing phy_reg: 0, to arch_reg: 3
+Freeing phy_reg: 3
+in-flight renaming arch_reg 69 to phy_reg 89, isMove: 0
+instret:26  PC:0x1ffff00000000000000000000800000a4  instr:0x00000297   iType:Auipc    [doCommitNormalInst [0]]       1687
+Committing phy_reg: 88, to arch_reg: 5
+Freeing phy_reg: 83
+instret:27  PC:0x1ffff00000000000000000000800000a8  instr:0xf6028293   iType:Alu    [doCommitNormalInst [0]]       1688
+Committing phy_reg: 89, to arch_reg: 5
+Freeing phy_reg: 88
+in-flight renaming arch_reg 0 to phy_reg 90, isMove: 0
+instret:28  PC:0x1ffff00000000000000000000800000ac  instr:0x30529073   iType:Scr    [doCommitSystemInst]       1694
+Freeing phy_reg: 90
+in-flight renaming arch_reg 74 to phy_reg 91, isMove: 0
+in-flight renaming arch_reg 74 to phy_reg 92, isMove: 0
+in-flight renaming arch_reg 16 to phy_reg 93, isMove: 0
+in-flight renaming arch_reg 0 to phy_reg 94, isMove: 0
+in-flight renaming arch_reg 67 to phy_reg 95, isMove: 0
+instret:29  PC:0x1ffff00000000000000000000800000b0  instr:0x00100513   iType:Alu    [doCommitNormalInst [0]]       1706
+Committing phy_reg: 91, to arch_reg: 10
+Freeing phy_reg: 70
+instret:30  PC:0x1ffff00000000000000000000800000b4  instr:0x01f51513   iType:Alu    [doCommitNormalInst [0]]       1707
+Committing phy_reg: 92, to arch_reg: 10
+Freeing phy_reg: 91
+wrongSpec - freeing phy reg 94 (slot 31)
+wrongSpec - freeing phy reg 95 (slot 32)
+instret:31  PC:0x1ffff00000000000000000000800000b8  instr:0x00055863   iType:Br    [doCommitNormalInst [0]]       1709
+Freeing phy_reg: 93
+in-flight renaming arch_reg 69 to phy_reg 94, isMove: 0
+in-flight renaming arch_reg 69 to phy_reg 95, isMove: 0
+in-flight renaming arch_reg 28 to phy_reg 96, isMove: 0
+instret:32  PC:0x1ffff00000000000000000000800000c8  instr:0x80000297   iType:Auipc    [doCommitNormalInst [0]]       1719
+Committing phy_reg: 94, to arch_reg: 5
+Freeing phy_reg: 89
+instret:33  PC:0x1ffff00000000000000000000800000cc  instr:0xf3828293   iType:Alu    [doCommitNormalInst [0]]       1720
+Committing phy_reg: 95, to arch_reg: 5
+Freeing phy_reg: 94
+instret:34  PC:0x1ffff00000000000000000000800000d0  instr:0x00028e63   iType:Br    [doCommitNormalInst [0]]       1722
+Freeing phy_reg: 96
+in-flight renaming arch_reg 0 to phy_reg 97, isMove: 0
+instret:35  PC:0x1ffff00000000000000000000800000ec  instr:0x30005073   iType:Csr    [doCommitSystemInst]       1778
+Freeing phy_reg: 97
+in-flight renaming arch_reg 69 to phy_reg 98, isMove: 0
+in-flight renaming arch_reg 69 to phy_reg 99, isMove: 0
+instret:36  PC:0x1ffff00000000000000000000800000f0  instr:0x00000297   iType:Auipc    [doCommitNormalInst [0]]       1790
+Committing phy_reg: 98, to arch_reg: 5
+Freeing phy_reg: 95
+instret:37  PC:0x1ffff00000000000000000000800000f4  instr:0x01428293   iType:Alu    [doCommitNormalInst [0]]       1791
+Committing phy_reg: 99, to arch_reg: 5
+Freeing phy_reg: 98
+in-flight renaming arch_reg 0 to phy_reg 100, isMove: 0
+instret:38  PC:0x1ffff00000000000000000000800000f8  instr:0x34129073   iType:Scr    [doCommitSystemInst]       1797
+Freeing phy_reg: 100
+in-flight renaming arch_reg 74 to phy_reg 101, isMove: 0
+instret:39  PC:0x1ffff00000000000000000000800000fc  instr:0xf1402573   iType:Csr    [doCommitSystemInst]       1809
+Committing phy_reg: 101, to arch_reg: 10
+Freeing phy_reg: 92
+in-flight renaming arch_reg 0 to phy_reg 102, isMove: 0
+instret:40  PC:0x1ffff0000000000000000000080000100  instr:0x30200073   iType:Mret    [doCommitSystemInst]       1817
+Freeing phy_reg: 102
+in-flight renaming arch_reg 74 to phy_reg 103, isMove: 0
+in-flight renaming arch_reg 75 to phy_reg 104, isMove: 0
+in-flight renaming arch_reg 77 to phy_reg 105, isMove: 0
+in-flight renaming arch_reg 77 to phy_reg 106, isMove: 0
+in-flight renaming arch_reg 0 to phy_reg 107, isMove: 0
+in-flight renaming arch_reg 78 to phy_reg 108, isMove: 0
+in-flight renaming arch_reg 93 to phy_reg 109, isMove: 0
+in-flight renaming arch_reg 67 to phy_reg 110, isMove: 0
+in-flight renaming arch_reg 16 to phy_reg 111, isMove: 0
+instret:41  PC:0x1ffff0000000000000000000080000104  instr:0x80000537   iType:Alu    [doCommitNormalInst [0]]       1831
+instret:42  PC:0x1ffff0000000000000000000080000108  instr:0x80000593   iType:Alu    [doCommitNormalInst [1]]       1831
+Committing phy_reg: 103, to arch_reg: 10
+Freeing phy_reg: 101
+Committing phy_reg: 104, to arch_reg: 11
+Freeing phy_reg: 65
+in-flight renaming arch_reg 79 to phy_reg 112, isMove: 0
+in-flight renaming arch_reg 93 to phy_reg 113, isMove: 0
+instret:43  PC:0x1ffff000000000000000000008000010c  instr:0x00002697   iType:Auipc    [doCommitNormalInst [0]]       1832
+Committing phy_reg: 105, to arch_reg: 13
+Freeing phy_reg: 13
+in-flight renaming arch_reg 93 to phy_reg 114, isMove: 0
+in-flight renaming arch_reg 93 to phy_reg 115, isMove: 0
+instret:44  PC:0x1ffff0000000000000000000080000110  instr:0xef468693   iType:Alu    [doCommitNormalInst [0]]       1833
+Committing phy_reg: 106, to arch_reg: 13
+Freeing phy_reg: 105
+in-flight renaming arch_reg 67 to phy_reg 116, isMove: 0
+in-flight renaming arch_reg 24 to phy_reg 117, isMove: 0
+instret:45  PC:0x1ffff0000000000000000000080000114  instr:0x00a6b023   iType:St    [doCommitNormalInst [0]]       1834
+Freeing phy_reg: 107
+               18350 L1 top.soc_top.corew_proc.core_0 cRqTransfer_new: 'h0 ; ProcRq { id: 'h00, addr: 'h0000000080002000, toState: M, op: St, byteEn: <V False True False True False True False True False True False True False True False True  >, data: TaggedData { tag: False, data: <V 'haaaaaaaaaaaaaaaa 'haaaaaaaaaaaaaaaa  > }, amoInst: AmoInst { func: None, width: Word, aq: True, rl: False }, loadTags: False, pcHash: 'h8114 }
+               18360 L1 top.soc_top.corew_proc.core_0 pipelineResp: PipeOut { cmd: tagged L1CRq 'h0, way: 'h0, pRqMiss: False, ram: RamData { info: CacheInfo { tag: 'h0000000000000, cs: I, dir: , owner: tagged Invalid , other:  }, line: CLine { tag: <V False True False True  >, data: <V <V 'haaaaaaaaaaaaaaaa 'haaaaaaaaaaaaaaaa  > <V 'haaaaaaaaaaaaaaaa 'haaaaaaaaaaaaaaaa  > <V 'haaaaaaaaaaaaaaaa 'haaaaaaaaaaaaaaaa  > <V 'haaaaaaaaaaaaaaaa 'haaaaaaaaaaaaaaaa  >  > } }, repInfo: , setAuxData: tagged Invalid  }
+               18360 L1 top.soc_top.corew_proc.core_0 pipelineResp: cRq: 'h0 ; ProcRq { id: 'h00, addr: 'h0000000080002000, toState: M, op: St, byteEn: <V False True False True False True False True False True False True False True False True  >, data: TaggedData { tag: False, data: <V 'haaaaaaaaaaaaaaaa 'haaaaaaaaaaaaaaaa  > }, amoInst: AmoInst { func: None, width: Word, aq: True, rl: False }, loadTags: False, pcHash: 'h8114 }
+               18360 L1 top.soc_top.corew_proc.core_0 pipelineResp: cRq: no owner, miss no replace
+               18380 L1 top.soc_top.corew_proc.core_0 sendRqToP: 'h0 ; ProcRq { id: 'h00, addr: 'h0000000080002000, toState: M, op: St, byteEn: <V False True False True False True False True False True False True False True False True  >, data: TaggedData { tag: False, data: <V 'haaaaaaaaaaaaaaaa 'haaaaaaaaaaaaaaaa  > }, amoInst: AmoInst { func: None, width: Word, aq: True, rl: False }, loadTags: False, pcHash: 'h8114 } ; L1CRqSlot { way: 'h0, cs: I, repTag: 'h2aaaaaaaaaaaa, waitP: True } ; CRqMsg { addr: 'h0000000080002000, fromState: I, toState: M, canUpToE: True, id: 'h0, child: , isPrefetchRq: False }
+in-flight renaming arch_reg 78 to phy_reg 118, isMove: 0
+in-flight renaming arch_reg 93 to phy_reg 119, isMove: 0
+in-flight renaming arch_reg 93 to phy_reg 120, isMove: 0
+in-flight renaming arch_reg 93 to phy_reg 121, isMove: 0
+in-flight renaming arch_reg 67 to phy_reg 122, isMove: 0
+in-flight renaming arch_reg 0 to phy_reg 123, isMove: 0
+in-flight renaming arch_reg 79 to phy_reg 124, isMove: 0
+in-flight renaming arch_reg 93 to phy_reg 125, isMove: 0
+in-flight renaming arch_reg 93 to phy_reg 126, isMove: 0
+in-flight renaming arch_reg 93 to phy_reg 127, isMove: 0
+in-flight renaming arch_reg 67 to phy_reg 5, isMove: 0
+in-flight renaming arch_reg 8 to phy_reg 11, isMove: 0
+in-flight renaming arch_reg 24 to phy_reg 10, isMove: 0
+in-flight renaming arch_reg 0 to phy_reg 64, isMove: 0
+in-flight renaming arch_reg 0 to phy_reg 68, isMove: 0
+in-flight renaming arch_reg 67 to phy_reg 69, isMove: 0
+               19130 L1 top.soc_top.corew_proc.core_0 pRsTransfer: PRsMsg { addr: 'h0000000080002000, toState: M, child: , data: tagged Valid CLine { tag: <V False False False False  >, data: <V <V 'h0000000000000000 'h0000000000000000  > <V 'h0000000000000000 'h0000000000000000  > <V 'haaaaaaaaaaaaaaaa 'haaaaaaaaaaaaaaaa  > <V 'haaaaaaaaaaaaaaaa 'haaaaaaaaaaaaaaaa  >  > }, id: 'h0 }
+               19140 L1 top.soc_top.corew_proc.core_0 pipelineResp: PipeOut { cmd: tagged L1PRs , way: 'h0, pRqMiss: False, ram: RamData { info: CacheInfo { tag: 'h0000000040001, cs: M, dir: , owner: tagged Valid 'h0, other:  }, line: CLine { tag: <V False False False False  >, data: <V <V 'h0000000000000000 'h0000000000000000  > <V 'h0000000000000000 'h0000000000000000  > <V 'haaaaaaaaaaaaaaaa 'haaaaaaaaaaaaaaaa  > <V 'haaaaaaaaaaaaaaaa 'haaaaaaaaaaaaaaaa  >  > } }, repInfo: , setAuxData: tagged Invalid  }
+               19140 L1 top.soc_top.corew_proc.core_0 pipelineResp: pRs: 
+               19140 L1 top.soc_top.corew_proc.core_0 pipelineResp: Hit func: 'h0 ; ProcRq { id: 'h00, addr: 'h0000000080002000, toState: M, op: St, byteEn: <V False True False True False True False True False True False True False True False True  >, data: TaggedData { tag: False, data: <V 'haaaaaaaaaaaaaaaa 'haaaaaaaaaaaaaaaa  > }, amoInst: AmoInst { func: None, width: Word, aq: True, rl: False }, loadTags: False, pcHash: 'h8114 }
+               19140 L1 top.soc_top.corew_proc.core_0 pipelineResp: Hit func: update ram: CLine { tag: <V False False False False  >, data: <V <V 'hffffffff80000000 'h0000000000000000  > <V 'h0000000000000000 'h0000000000000000  > <V 'haaaaaaaaaaaaaaaa 'haaaaaaaaaaaaaaaa  > <V 'haaaaaaaaaaaaaaaa 'haaaaaaaaaaaaaaaa  >  > } ; tagged Invalid 
+               19150 L1 top.soc_top.corew_proc.core_0 cRqTransfer_new: 'h1 ; ProcRq { id: 'h00, addr: 'h0000000080002000, toState: M, op: Amo, byteEn: <V True True True True True True True True False False False False False False False False  >, data: TaggedData { tag: False, data: <V 'hfffffffffffff800 'h0000000000000000  > }, amoInst: AmoInst { func: Add, width: DWord, aq: False, rl: False }, loadTags: False, pcHash: 'haaaa }
+               19160 L1 top.soc_top.corew_proc.core_0 pipelineResp: PipeOut { cmd: tagged L1CRq 'h1, way: 'h0, pRqMiss: False, ram: RamData { info: CacheInfo { tag: 'h0000000040001, cs: M, dir: , owner: tagged Invalid , other:  }, line: CLine { tag: <V False False False False  >, data: <V <V 'hffffffff80000000 'h0000000000000000  > <V 'h0000000000000000 'h0000000000000000  > <V 'haaaaaaaaaaaaaaaa 'haaaaaaaaaaaaaaaa  > <V 'haaaaaaaaaaaaaaaa 'haaaaaaaaaaaaaaaa  >  > } }, repInfo: , setAuxData: tagged Invalid  }
+               19160 L1 top.soc_top.corew_proc.core_0 pipelineResp: cRq: 'h1 ; ProcRq { id: 'h00, addr: 'h0000000080002000, toState: M, op: Amo, byteEn: <V True True True True True True True True False False False False False False False False  >, data: TaggedData { tag: False, data: <V 'hfffffffffffff800 'h0000000000000000  > }, amoInst: AmoInst { func: Add, width: DWord, aq: False, rl: False }, loadTags: False, pcHash: 'haaaa }
+               19160 L1 top.soc_top.corew_proc.core_0 pipelineResp: cRq: no owner, hit
+               19160 L1 top.soc_top.corew_proc.core_0 pipelineResp: Hit func: 'h1 ; ProcRq { id: 'h00, addr: 'h0000000080002000, toState: M, op: Amo, byteEn: <V True True True True True True True True False False False False False False False False  >, data: TaggedData { tag: False, data: <V 'hfffffffffffff800 'h0000000000000000  > }, amoInst: AmoInst { func: Add, width: DWord, aq: False, rl: False }, loadTags: False, pcHash: 'haaaa }
+               19160 L1 top.soc_top.corew_proc.core_0 pipelineResp: Hit func: AMO process in next cycle
+               19170 L1 top.soc_top.corew_proc.core_0 processAmo: update ram: CLine { tag: <V False False False False  >, data: <V <V 'hffffffff7ffff800 'h0000000000000000  > <V 'h0000000000000000 'h0000000000000000  > <V 'haaaaaaaaaaaaaaaa 'haaaaaaaaaaaaaaaa  > <V 'haaaaaaaaaaaaaaaa 'haaaaaaaaaaaaaaaa  >  > } ; tagged Invalid 
+               19190 L1 top.soc_top.corew_proc.core_0 cRqTransfer_new: 'h2 ; ProcRq { id: 'h01, addr: 'h0000000080002000, toState: E, op: Ld, byteEn: <V False True False True False True False True False True False True False True False True  >, data: TaggedData { tag: False, data: <V 'haaaaaaaaaaaaaaaa 'haaaaaaaaaaaaaaaa  > }, amoInst: AmoInst { func: None, width: Word, aq: True, rl: False }, loadTags: False, pcHash: 'h8128 }
+instret:46  PC:0x1ffff0000000000000000000080000118  instr:0x00b6b72f   iType:Amo    [doCommitNormalInst [0]]       1919
+instret:47  PC:0x1ffff000000000000000000008000011c  instr:0x80000eb7   iType:Alu    [doCommitNormalInst [1]]       1919
+Committing phy_reg: 108, to arch_reg: 14
+Freeing phy_reg: 14
+Committing phy_reg: 109, to arch_reg: 29
+Freeing phy_reg: 29
+               19200 L1 top.soc_top.corew_proc.core_0 pipelineResp: PipeOut { cmd: tagged L1CRq 'h2, way: 'h0, pRqMiss: False, ram: RamData { info: CacheInfo { tag: 'h0000000040001, cs: M, dir: , owner: tagged Invalid , other:  }, line: CLine { tag: <V False False False False  >, data: <V <V 'hffffffff7ffff800 'h0000000000000000  > <V 'h0000000000000000 'h0000000000000000  > <V 'haaaaaaaaaaaaaaaa 'haaaaaaaaaaaaaaaa  > <V 'haaaaaaaaaaaaaaaa 'haaaaaaaaaaaaaaaa  >  > } }, repInfo: , setAuxData: tagged Invalid  }
+               19200 L1 top.soc_top.corew_proc.core_0 pipelineResp: cRq: 'h2 ; ProcRq { id: 'h01, addr: 'h0000000080002000, toState: E, op: Ld, byteEn: <V False True False True False True False True False True False True False True False True  >, data: TaggedData { tag: False, data: <V 'haaaaaaaaaaaaaaaa 'haaaaaaaaaaaaaaaa  > }, amoInst: AmoInst { func: None, width: Word, aq: True, rl: False }, loadTags: False, pcHash: 'h8128 }
+               19200 L1 top.soc_top.corew_proc.core_0 pipelineResp: cRq: no owner, hit
+               19200 L1 top.soc_top.corew_proc.core_0 pipelineResp: Hit func: 'h2 ; ProcRq { id: 'h01, addr: 'h0000000080002000, toState: E, op: Ld, byteEn: <V False True False True False True False True False True False True False True False True  >, data: TaggedData { tag: False, data: <V 'haaaaaaaaaaaaaaaa 'haaaaaaaaaaaaaaaa  > }, amoInst: AmoInst { func: None, width: Word, aq: True, rl: False }, loadTags: False, pcHash: 'h8128 }
+               19200 L1 top.soc_top.corew_proc.core_0 pipelineResp: Hit func: update ram: CLine { tag: <V False False False False  >, data: <V <V 'hffffffff7ffff800 'h0000000000000000  > <V 'h0000000000000000 'h0000000000000000  > <V 'haaaaaaaaaaaaaaaa 'haaaaaaaaaaaaaaaa  > <V 'haaaaaaaaaaaaaaaa 'haaaaaaaaaaaaaaaa  >  > } ; tagged Invalid 
+instret:48  PC:0x1ffff0000000000000000000080000120  instr:0x00200193   iType:Alu    [doCommitNormalInst [0]]       1920
+Committing phy_reg: 110, to arch_reg: 3
+Not freeing phy_reg: 0, in use
+instret:49  PC:0x1ffff0000000000000000000080000124  instr:0x05d71863   iType:Br    [doCommitNormalInst [0]]       1923
+instret:50  PC:0x1ffff0000000000000000000080000128  instr:0x0006b783   iType:Ld    [doCommitNormalInst [1]]       1923
+Freeing phy_reg: 111
+Committing phy_reg: 112, to arch_reg: 15
+Freeing phy_reg: 15
+instret:51  PC:0x1ffff000000000000000000008000012c  instr:0xfff00e9b   iType:Alu    [doCommitNormalInst [0]]       1924
+instret:52  PC:0x1ffff0000000000000000000080000130  instr:0x01fe9e93   iType:Alu    [doCommitNormalInst [1]]       1924
+Committing phy_reg: 113, to arch_reg: 29
+Freeing phy_reg: 109
+Committing phy_reg: 114, to arch_reg: 29
+Freeing phy_reg: 113
+instret:53  PC:0x1ffff0000000000000000000080000134  instr:0x800e8e93   iType:Alu    [doCommitNormalInst [0]]       1925
+instret:54  PC:0x1ffff0000000000000000000080000138  instr:0x00300193   iType:Alu    [doCommitNormalInst [1]]       1925
+Committing phy_reg: 115, to arch_reg: 29
+Freeing phy_reg: 114
+Committing phy_reg: 116, to arch_reg: 3
+Freeing phy_reg: 110
+instret:55  PC:0x1ffff000000000000000000008000013c  instr:0x03d79c63   iType:Br    [doCommitNormalInst [0]]       1926
+Freeing phy_reg: 117
+               19280 L1 top.soc_top.corew_proc.core_0 cRqTransfer_new: 'h3 ; ProcRq { id: 'h00, addr: 'h0000000080002000, toState: M, op: Amo, byteEn: <V True True True True True True True True False False False False False False False False  >, data: TaggedData { tag: False, data: <V 'hfffffffffffff800 'h0000000000000000  > }, amoInst: AmoInst { func: Add, width: DWord, aq: False, rl: False }, loadTags: False, pcHash: 'haaaa }
+               19290 L1 top.soc_top.corew_proc.core_0 pipelineResp: PipeOut { cmd: tagged L1CRq 'h3, way: 'h0, pRqMiss: False, ram: RamData { info: CacheInfo { tag: 'h0000000040001, cs: M, dir: , owner: tagged Invalid , other:  }, line: CLine { tag: <V False False False False  >, data: <V <V 'hffffffff7ffff800 'h0000000000000000  > <V 'h0000000000000000 'h0000000000000000  > <V 'haaaaaaaaaaaaaaaa 'haaaaaaaaaaaaaaaa  > <V 'haaaaaaaaaaaaaaaa 'haaaaaaaaaaaaaaaa  >  > } }, repInfo: , setAuxData: tagged Invalid  }
+               19290 L1 top.soc_top.corew_proc.core_0 pipelineResp: cRq: 'h3 ; ProcRq { id: 'h00, addr: 'h0000000080002000, toState: M, op: Amo, byteEn: <V True True True True True True True True False False False False False False False False  >, data: TaggedData { tag: False, data: <V 'hfffffffffffff800 'h0000000000000000  > }, amoInst: AmoInst { func: Add, width: DWord, aq: False, rl: False }, loadTags: False, pcHash: 'haaaa }
+               19290 L1 top.soc_top.corew_proc.core_0 pipelineResp: cRq: no owner, hit
+               19290 L1 top.soc_top.corew_proc.core_0 pipelineResp: Hit func: 'h3 ; ProcRq { id: 'h00, addr: 'h0000000080002000, toState: M, op: Amo, byteEn: <V True True True True True True True True False False False False False False False False  >, data: TaggedData { tag: False, data: <V 'hfffffffffffff800 'h0000000000000000  > }, amoInst: AmoInst { func: Add, width: DWord, aq: False, rl: False }, loadTags: False, pcHash: 'haaaa }
+               19290 L1 top.soc_top.corew_proc.core_0 pipelineResp: Hit func: AMO process in next cycle
+               19300 L1 top.soc_top.corew_proc.core_0 processAmo: update ram: CLine { tag: <V False False False False  >, data: <V <V 'hffffffff7ffff000 'h0000000000000000  > <V 'h0000000000000000 'h0000000000000000  > <V 'haaaaaaaaaaaaaaaa 'haaaaaaaaaaaaaaaa  > <V 'haaaaaaaaaaaaaaaa 'haaaaaaaaaaaaaaaa  >  > } ; tagged Invalid 
+               19320 L1 top.soc_top.corew_proc.core_0 cRqTransfer_new: 'h4 ; ProcRq { id: 'h02, addr: 'h0000000080002000, toState: E, op: Ld, byteEn: <V False True False True False True False True False True False True False True False True  >, data: TaggedData { tag: False, data: <V 'haaaaaaaaaaaaaaaa 'haaaaaaaaaaaaaaaa  > }, amoInst: AmoInst { func: None, width: Word, aq: True, rl: False }, loadTags: False, pcHash: 'h8158 }
+instret:56  PC:0x1ffff0000000000000000000080000140  instr:0x00b6b72f   iType:Amo    [doCommitNormalInst [0]]       1932
+instret:57  PC:0x1ffff0000000000000000000080000144  instr:0xfff00e9b   iType:Alu    [doCommitNormalInst [1]]       1932
+Committing phy_reg: 118, to arch_reg: 14
+Freeing phy_reg: 108
+Committing phy_reg: 119, to arch_reg: 29
+Freeing phy_reg: 115
+               19330 L1 top.soc_top.corew_proc.core_0 pipelineResp: PipeOut { cmd: tagged L1CRq 'h4, way: 'h0, pRqMiss: False, ram: RamData { info: CacheInfo { tag: 'h0000000040001, cs: M, dir: , owner: tagged Invalid , other:  }, line: CLine { tag: <V False False False False  >, data: <V <V 'hffffffff7ffff000 'h0000000000000000  > <V 'h0000000000000000 'h0000000000000000  > <V 'haaaaaaaaaaaaaaaa 'haaaaaaaaaaaaaaaa  > <V 'haaaaaaaaaaaaaaaa 'haaaaaaaaaaaaaaaa  >  > } }, repInfo: , setAuxData: tagged Invalid  }
+               19330 L1 top.soc_top.corew_proc.core_0 pipelineResp: cRq: 'h4 ; ProcRq { id: 'h02, addr: 'h0000000080002000, toState: E, op: Ld, byteEn: <V False True False True False True False True False True False True False True False True  >, data: TaggedData { tag: False, data: <V 'haaaaaaaaaaaaaaaa 'haaaaaaaaaaaaaaaa  > }, amoInst: AmoInst { func: None, width: Word, aq: True, rl: False }, loadTags: False, pcHash: 'h8158 }
+               19330 L1 top.soc_top.corew_proc.core_0 pipelineResp: cRq: no owner, hit
+               19330 L1 top.soc_top.corew_proc.core_0 pipelineResp: Hit func: 'h4 ; ProcRq { id: 'h02, addr: 'h0000000080002000, toState: E, op: Ld, byteEn: <V False True False True False True False True False True False True False True False True  >, data: TaggedData { tag: False, data: <V 'haaaaaaaaaaaaaaaa 'haaaaaaaaaaaaaaaa  > }, amoInst: AmoInst { func: None, width: Word, aq: True, rl: False }, loadTags: False, pcHash: 'h8158 }
+               19330 L1 top.soc_top.corew_proc.core_0 pipelineResp: Hit func: update ram: CLine { tag: <V False False False False  >, data: <V <V 'hffffffff7ffff000 'h0000000000000000  > <V 'h0000000000000000 'h0000000000000000  > <V 'haaaaaaaaaaaaaaaa 'haaaaaaaaaaaaaaaa  > <V 'haaaaaaaaaaaaaaaa 'haaaaaaaaaaaaaaaa  >  > } ; tagged Invalid 
+instret:58  PC:0x1ffff0000000000000000000080000148  instr:0x01fe9e93   iType:Alu    [doCommitNormalInst [0]]       1933
+instret:59  PC:0x1ffff000000000000000000008000014c  instr:0x800e8e93   iType:Alu    [doCommitNormalInst [1]]       1933
+Committing phy_reg: 120, to arch_reg: 29
+Freeing phy_reg: 119
+Committing phy_reg: 121, to arch_reg: 29
+Freeing phy_reg: 120
+instret:60  PC:0x1ffff0000000000000000000080000150  instr:0x00400193   iType:Alu    [doCommitNormalInst [0]]       1934
+Committing phy_reg: 122, to arch_reg: 3
+Freeing phy_reg: 116
+instret:61  PC:0x1ffff0000000000000000000080000154  instr:0x03d71063   iType:Br    [doCommitNormalInst [0]]       1936
+instret:62  PC:0x1ffff0000000000000000000080000158  instr:0x0006b783   iType:Ld    [doCommitNormalInst [1]]       1936
+Freeing phy_reg: 123
+Committing phy_reg: 124, to arch_reg: 15
+Freeing phy_reg: 112
+instret:63  PC:0x1ffff000000000000000000008000015c  instr:0xfff80eb7   iType:Alu    [doCommitNormalInst [0]]       1937
+instret:64  PC:0x1ffff0000000000000000000080000160  instr:0xfffe8e9b   iType:Alu    [doCommitNormalInst [1]]       1937
+Committing phy_reg: 125, to arch_reg: 29
+Freeing phy_reg: 121
+Committing phy_reg: 126, to arch_reg: 29
+Freeing phy_reg: 125
+instret:65  PC:0x1ffff0000000000000000000080000164  instr:0x00ce9e93   iType:Alu    [doCommitNormalInst [0]]       1938
+instret:66  PC:0x1ffff0000000000000000000080000168  instr:0x00500193   iType:Alu    [doCommitNormalInst [1]]       1938
+Committing phy_reg: 127, to arch_reg: 29
+Freeing phy_reg: 126
+Committing phy_reg: 5, to arch_reg: 3
+Freeing phy_reg: 122
+instret:67  PC:0x1ffff000000000000000000008000016c  instr:0x01d79463   iType:Br    [doCommitNormalInst [0]]       1939
+instret:68  PC:0x1ffff0000000000000000000080000170  instr:0x00301c63   iType:Br    [doCommitNormalInst [1]]       1939
+Freeing phy_reg: 11
+Freeing phy_reg: 10
+in-flight renaming arch_reg 0 to phy_reg 64, isMove: 0
+in-flight renaming arch_reg 67 to phy_reg 68, isMove: 0
+instret:69  PC:0x1ffff0000000000000000000080000188  instr:0x0ff0000f   iType:Fence    [doCommitNormalInst [0]]       1952
+Freeing phy_reg: 64
+instret:70  PC:0x1ffff000000000000000000008000018c  instr:0x00100193   iType:Alu    [doCommitNormalInst [0]]       1954
+Committing phy_reg: 68, to arch_reg: 3
+Freeing phy_reg: 5
+instret:71  PC:0x1ffff0000000000000000000080000190  instr:0x00000073  iType:Ecall    [doCommitTrap]       1956
+in-flight renaming arch_reg 94 to phy_reg 69, isMove: 0
+instret:72  PC:0x1ffff0000000000000000000080000004  instr:0x34202f73   iType:Csr    [doCommitSystemInst]       2013
+Committing phy_reg: 69, to arch_reg: 30
+Freeing phy_reg: 30
+in-flight renaming arch_reg 95 to phy_reg 66, isMove: 0
+in-flight renaming arch_reg 20 to phy_reg 71, isMove: 0
+in-flight renaming arch_reg 95 to phy_reg 67, isMove: 0
+in-flight renaming arch_reg 12 to phy_reg 72, isMove: 0
+in-flight renaming arch_reg 95 to phy_reg 74, isMove: 0
+in-flight renaming arch_reg 4 to phy_reg 75, isMove: 0
+in-flight renaming arch_reg 94 to phy_reg 73, isMove: 0
+in-flight renaming arch_reg 94 to phy_reg 76, isMove: 0
+in-flight renaming arch_reg 8 to phy_reg 78, isMove: 0
+instret:73  PC:0x1ffff0000000000000000000080000008  instr:0x00800f93   iType:Alu    [doCommitNormalInst [0]]       2025
+Committing phy_reg: 66, to arch_reg: 31
+Freeing phy_reg: 31
+instret:74  PC:0x1ffff000000000000000000008000000c  instr:0x03ff0a63   iType:Br    [doCommitNormalInst [0]]       2027
+Freeing phy_reg: 71
+in-flight renaming arch_reg 94 to phy_reg 67, isMove: 0
+in-flight renaming arch_reg 0 to phy_reg 72, isMove: 0
+in-flight renaming arch_reg 0 to phy_reg 74, isMove: 0
+in-flight renaming arch_reg 94 to phy_reg 75, isMove: 0
+in-flight renaming arch_reg 0 to phy_reg 73, isMove: 0
+instret:75  PC:0x1ffff0000000000000000000080000040  instr:0x00001f17   iType:Auipc    [doCommitNormalInst [0]]       2035
+Committing phy_reg: 67, to arch_reg: 30
+Freeing phy_reg: 69
+in-flight renaming arch_reg 0 to phy_reg 76, isMove: 0
+in-flight renaming arch_reg 94 to phy_reg 78, isMove: 0
+in-flight renaming arch_reg 0 to phy_reg 77, isMove: 0
+in-flight renaming arch_reg 0 to phy_reg 79, isMove: 0
+in-flight renaming arch_reg 94 to phy_reg 80, isMove: 0
+in-flight renaming arch_reg 0 to phy_reg 81, isMove: 0
+2041: mmioPlatform.rl_tohost: 0x1 (= 1)
+PASS

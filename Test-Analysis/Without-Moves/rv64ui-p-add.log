@@ -1,0 +1,1901 @@
+Running: /home/alice/Cambridge/PartII/Project/Forked-Repo/Toooba/Tests/elf_to_hex/elf_to_hex /home/alice/Cambridge/PartII/Project/Forked-Repo/Toooba/Tests/isa/rv64ui-p-add Mem.hex
+Finished with exit code 0
+Stdout:
+c_mem_load_elf: /home/alice/Cambridge/PartII/Project/Forked-Repo/Toooba/Tests/isa/rv64ui-p-add is a 64-bit ELF file
+Section .text.init      : addr         80000000 to addr         80000644; size 0x     644 (= 1604) bytes
+Section .tohost         : addr         80001000 to addr         80001048; size 0x      48 (= 72) bytes
+Section .riscv.attributes: Ignored
+Section .symtab         : Searching for addresses of '_start', 'exit' and 'tohost' symbols
+Writing symbols to:    symbol_table.txt
+    No 'exit' label found
+Section .strtab         : Ignored
+Section .shstrtab       : Ignored
+Min addr:                    80000000 (hex)
+Max addr:                    80001047 (hex)
+Writing mem hex to file 'Mem.hex'
+Subtracting 0x80000000 base from addresses
+Running: /home/alice/Cambridge/PartII/Project/Forked-Repo/Toooba/builds/RV64ACDFIMSUxCHERI_Toooba_bluesim/exe_HW_sim +tohost
+Finished with exit code 0
+Stdout:
+Warning: file 'Mem.hex' for memory 'rf' has a gap at addresses 131 to 33554430.
+mkProc came out of reset
+c_get_symbol: could not find value for symbol fromhost
+1: top.soc_top.rl_reset_start_initial ...
+11: Mem_Controller.set_addr_map: addr_base 0x80000000 addr_lim 0xc0000000
+  SoC address map:
+  Boot ROM:        0x1000 .. 0x2000
+  Mem0 Controller: 0x80000000 .. 0xc0000000
+  UART0:           0xc0000000 .. 0xc0000080
+11: top.soc_top.rl_reset_complete_initial
+================================================================
+Bluespec RISC-V standalone system simulation v1.2
+Copyright (c) 2017-2019 Bluespec, Inc. All Rights Reserved.
+================================================================
+INFO: watch_tohost 1, tohost_addr = 0x80001000, fromhost_addr = 0x0
+12: top.soc_top.method start (tohost 80001000, fromhost 0)
+100: top.soc_top.rl_step_0, n = 0, do_release
+100: top.soc_top do_release(restartRunning: True, to_host_addr: 0)
+100: top.soc_top.corew_proc.method start: startpc 1000, tohostAddr 0, fromhostAddr 0
+101: top.soc_top.rl_ctrl_req
+101: top.soc_top.corew_proc.method start: startpc 1000, tohostAddr 80001000, fromhostAddr 0
+101: top.soc_top do_release(restartRunning: True, to_host_addr: 80001000)
+in-flight renaming arch_reg 69 to phy_reg 64, isMove: 0
+in-flight renaming arch_reg 75 to phy_reg 65, isMove: 0
+instret:0  PC:0x1ffff0000000000000000000000001000  instr:0x00000297   iType:Auipc    [doCommitNormalInst [0]]        167
+Committing phy_reg: 64, to arch_reg: 5
+Freeing phy_reg: 5
+instret:1  PC:0x1ffff0000000000000000000000001004  instr:0x02028593   iType:Alu    [doCommitNormalInst [0]]        168
+Committing phy_reg: 65, to arch_reg: 11
+Freeing phy_reg: 11
+in-flight renaming arch_reg 74 to phy_reg 66, isMove: 0
+instret:2  PC:0x1ffff0000000000000000000000001008  instr:0xf1402573   iType:Csr    [doCommitSystemInst]        224
+Committing phy_reg: 66, to arch_reg: 10
+Freeing phy_reg: 10
+in-flight renaming arch_reg 69 to phy_reg 67, isMove: 0
+in-flight renaming arch_reg 0 to phy_reg 68, isMove: 0
+instret:3  PC:0x1ffff000000000000000000000000100c  instr:0x0182b283   iType:Ld    [doCommitNormalInst [0]]        403
+Committing phy_reg: 67, to arch_reg: 5
+Freeing phy_reg: 64
+instret:4  PC:0x1ffff0000000000000000000000001010  instr:0x00028067   iType:Jr    [doCommitNormalInst [0]]        408
+Freeing phy_reg: 68
+in-flight renaming arch_reg 0 to phy_reg 69, isMove: 0
+instret:5  PC:0x1ffff0000000000000000000080000000  instr:0x04c0006f   iType:J    [doCommitNormalInst [0]]       1155
+Freeing phy_reg: 69
+in-flight renaming arch_reg 74 to phy_reg 70, isMove: 0
+instret:6  PC:0x1ffff000000000000000000008000004c  instr:0xf1402573   iType:Csr    [doCommitSystemInst]       1209
+Committing phy_reg: 70, to arch_reg: 10
+Freeing phy_reg: 66
+in-flight renaming arch_reg 0 to phy_reg 71, isMove: 0
+in-flight renaming arch_reg 69 to phy_reg 72, isMove: 0
+in-flight renaming arch_reg 69 to phy_reg 73, isMove: 0
+instret:7  PC:0x1ffff0000000000000000000080000050  instr:0x00051063   iType:Br    [doCommitNormalInst [0]]       1221
+instret:8  PC:0x1ffff0000000000000000000080000054  instr:0x00000297   iType:Auipc    [doCommitNormalInst [1]]       1221
+Freeing phy_reg: 71
+Committing phy_reg: 72, to arch_reg: 5
+Freeing phy_reg: 67
+instret:9  PC:0x1ffff0000000000000000000080000058  instr:0x01028293   iType:Alu    [doCommitNormalInst [0]]       1222
+Committing phy_reg: 73, to arch_reg: 5
+Freeing phy_reg: 72
+in-flight renaming arch_reg 0 to phy_reg 74, isMove: 0
+instret:10  PC:0x1ffff000000000000000000008000005c  instr:0x30529073   iType:Scr    [doCommitSystemInst]       1228
+Freeing phy_reg: 74
+in-flight renaming arch_reg 0 to phy_reg 75, isMove: 0
+instret:11  PC:0x1ffff0000000000000000000080000060  instr:0x18005073   iType:Csr    [doCommitSystemInst]       1280
+Freeing phy_reg: 75
+in-flight renaming arch_reg 69 to phy_reg 76, isMove: 0
+in-flight renaming arch_reg 69 to phy_reg 77, isMove: 0
+instret:12  PC:0x1ffff0000000000000000000080000064  instr:0x00000297   iType:Auipc    [doCommitNormalInst [0]]       1555
+Committing phy_reg: 76, to arch_reg: 5
+Freeing phy_reg: 73
+instret:13  PC:0x1ffff0000000000000000000080000068  instr:0x02428293   iType:Alu    [doCommitNormalInst [0]]       1556
+Committing phy_reg: 77, to arch_reg: 5
+Freeing phy_reg: 76
+in-flight renaming arch_reg 0 to phy_reg 78, isMove: 0
+instret:14  PC:0x1ffff000000000000000000008000006c  instr:0x30529073   iType:Scr    [doCommitSystemInst]       1562
+Freeing phy_reg: 78
+in-flight renaming arch_reg 69 to phy_reg 79, isMove: 0
+in-flight renaming arch_reg 69 to phy_reg 80, isMove: 0
+in-flight renaming arch_reg 69 to phy_reg 81, isMove: 0
+instret:15  PC:0x1ffff0000000000000000000080000070  instr:0x0010029b   iType:Alu    [doCommitNormalInst [0]]       1574
+Committing phy_reg: 79, to arch_reg: 5
+Freeing phy_reg: 77
+instret:16  PC:0x1ffff0000000000000000000080000074  instr:0x03529293   iType:Alu    [doCommitNormalInst [0]]       1575
+Committing phy_reg: 80, to arch_reg: 5
+Freeing phy_reg: 79
+instret:17  PC:0x1ffff0000000000000000000080000078  instr:0xfff28293   iType:Alu    [doCommitNormalInst [0]]       1576
+Committing phy_reg: 81, to arch_reg: 5
+Freeing phy_reg: 80
+instret:18  PC:0x1ffff000000000000000000008000007c  instr:0x3b029073  iType:Csr    [doCommitTrap]       1578
+in-flight renaming arch_reg 69 to phy_reg 82, isMove: 0
+in-flight renaming arch_reg 69 to phy_reg 83, isMove: 0
+instret:19  PC:0x1ffff0000000000000000000080000088  instr:0x00000297   iType:Auipc    [doCommitNormalInst [0]]       1591
+Committing phy_reg: 82, to arch_reg: 5
+Freeing phy_reg: 81
+instret:20  PC:0x1ffff000000000000000000008000008c  instr:0x01828293   iType:Alu    [doCommitNormalInst [0]]       1592
+Committing phy_reg: 83, to arch_reg: 5
+Freeing phy_reg: 82
+in-flight renaming arch_reg 0 to phy_reg 84, isMove: 0
+instret:21  PC:0x1ffff0000000000000000000080000090  instr:0x30529073   iType:Scr    [doCommitSystemInst]       1598
+Freeing phy_reg: 84
+in-flight renaming arch_reg 0 to phy_reg 85, isMove: 0
+instret:22  PC:0x1ffff0000000000000000000080000094  instr:0x30205073   iType:Csr    [doCommitSystemInst]       1651
+Freeing phy_reg: 85
+in-flight renaming arch_reg 0 to phy_reg 86, isMove: 0
+instret:23  PC:0x1ffff0000000000000000000080000098  instr:0x30305073   iType:Csr    [doCommitSystemInst]       1663
+Freeing phy_reg: 86
+in-flight renaming arch_reg 0 to phy_reg 87, isMove: 0
+instret:24  PC:0x1ffff000000000000000000008000009c  instr:0x30405073   iType:Csr    [doCommitSystemInst]       1675
+Freeing phy_reg: 87
+in-flight renaming arch_reg 67 to phy_reg 88, isMove: 0
+in-flight renaming arch_reg 69 to phy_reg 89, isMove: 0
+in-flight renaming arch_reg 69 to phy_reg 90, isMove: 0
+instret:25  PC:0x1ffff00000000000000000000800000a0  instr:0x00000193   iType:Alu    [doCommitNormalInst [0]]       1687
+instret:26  PC:0x1ffff00000000000000000000800000a4  instr:0x00000297   iType:Auipc    [doCommitNormalInst [1]]       1687
+Committing phy_reg: 88, to arch_reg: 3
+Freeing phy_reg: 3
+Committing phy_reg: 89, to arch_reg: 5
+Freeing phy_reg: 83
+instret:27  PC:0x1ffff00000000000000000000800000a8  instr:0xf6028293   iType:Alu    [doCommitNormalInst [0]]       1688
+Committing phy_reg: 90, to arch_reg: 5
+Freeing phy_reg: 89
+in-flight renaming arch_reg 0 to phy_reg 91, isMove: 0
+instret:28  PC:0x1ffff00000000000000000000800000ac  instr:0x30529073   iType:Scr    [doCommitSystemInst]       1694
+Freeing phy_reg: 91
+in-flight renaming arch_reg 74 to phy_reg 92, isMove: 0
+in-flight renaming arch_reg 74 to phy_reg 93, isMove: 0
+in-flight renaming arch_reg 16 to phy_reg 94, isMove: 0
+in-flight renaming arch_reg 0 to phy_reg 95, isMove: 0
+in-flight renaming arch_reg 67 to phy_reg 96, isMove: 0
+instret:29  PC:0x1ffff00000000000000000000800000b0  instr:0x00100513   iType:Alu    [doCommitNormalInst [0]]       1706
+Committing phy_reg: 92, to arch_reg: 10
+Freeing phy_reg: 70
+instret:30  PC:0x1ffff00000000000000000000800000b4  instr:0x01f51513   iType:Alu    [doCommitNormalInst [0]]       1707
+Committing phy_reg: 93, to arch_reg: 10
+Freeing phy_reg: 92
+wrongSpec - freeing phy reg 96 (slot 32)
+wrongSpec - freeing phy reg 42 (slot 33)
+instret:31  PC:0x1ffff00000000000000000000800000b8  instr:0x00055863   iType:Br    [doCommitNormalInst [0]]       1709
+Freeing phy_reg: 94
+in-flight renaming arch_reg 69 to phy_reg 95, isMove: 0
+in-flight renaming arch_reg 69 to phy_reg 96, isMove: 0
+in-flight renaming arch_reg 28 to phy_reg 97, isMove: 0
+instret:32  PC:0x1ffff00000000000000000000800000c8  instr:0x80000297   iType:Auipc    [doCommitNormalInst [0]]       1719
+Committing phy_reg: 95, to arch_reg: 5
+Freeing phy_reg: 90
+instret:33  PC:0x1ffff00000000000000000000800000cc  instr:0xf3828293   iType:Alu    [doCommitNormalInst [0]]       1720
+Committing phy_reg: 96, to arch_reg: 5
+Freeing phy_reg: 95
+instret:34  PC:0x1ffff00000000000000000000800000d0  instr:0x00028e63   iType:Br    [doCommitNormalInst [0]]       1722
+Freeing phy_reg: 97
+in-flight renaming arch_reg 0 to phy_reg 98, isMove: 0
+instret:35  PC:0x1ffff00000000000000000000800000ec  instr:0x30005073   iType:Csr    [doCommitSystemInst]       1778
+Freeing phy_reg: 98
+in-flight renaming arch_reg 69 to phy_reg 99, isMove: 0
+in-flight renaming arch_reg 69 to phy_reg 100, isMove: 0
+instret:36  PC:0x1ffff00000000000000000000800000f0  instr:0x00000297   iType:Auipc    [doCommitNormalInst [0]]       1790
+Committing phy_reg: 99, to arch_reg: 5
+Freeing phy_reg: 96
+instret:37  PC:0x1ffff00000000000000000000800000f4  instr:0x01428293   iType:Alu    [doCommitNormalInst [0]]       1791
+Committing phy_reg: 100, to arch_reg: 5
+Freeing phy_reg: 99
+in-flight renaming arch_reg 0 to phy_reg 101, isMove: 0
+instret:38  PC:0x1ffff00000000000000000000800000f8  instr:0x34129073   iType:Scr    [doCommitSystemInst]       1797
+Freeing phy_reg: 101
+in-flight renaming arch_reg 74 to phy_reg 102, isMove: 0
+instret:39  PC:0x1ffff00000000000000000000800000fc  instr:0xf1402573   iType:Csr    [doCommitSystemInst]       1809
+Committing phy_reg: 102, to arch_reg: 10
+Freeing phy_reg: 93
+in-flight renaming arch_reg 0 to phy_reg 103, isMove: 0
+instret:40  PC:0x1ffff0000000000000000000080000100  instr:0x30200073   iType:Mret    [doCommitSystemInst]       1817
+Freeing phy_reg: 103
+in-flight renaming arch_reg 65 to phy_reg 104, isMove: 0
+in-flight renaming arch_reg 66 to phy_reg 105, isMove: 0
+in-flight renaming arch_reg 94 to phy_reg 106, isMove: 0
+in-flight renaming arch_reg 93 to phy_reg 107, isMove: 0
+in-flight renaming arch_reg 67 to phy_reg 108, isMove: 0
+in-flight renaming arch_reg 0 to phy_reg 109, isMove: 0
+in-flight renaming arch_reg 65 to phy_reg 110, isMove: 0
+in-flight renaming arch_reg 66 to phy_reg 111, isMove: 0
+in-flight renaming arch_reg 94 to phy_reg 112, isMove: 0
+in-flight renaming arch_reg 93 to phy_reg 113, isMove: 0
+instret:41  PC:0x1ffff0000000000000000000080000104  instr:0x00000093   iType:Alu    [doCommitNormalInst [0]]       1831
+instret:42  PC:0x1ffff0000000000000000000080000108  instr:0x00000113   iType:Alu    [doCommitNormalInst [1]]       1831
+Committing phy_reg: 104, to arch_reg: 1
+Freeing phy_reg: 1
+Committing phy_reg: 105, to arch_reg: 2
+Freeing phy_reg: 2
+in-flight renaming arch_reg 67 to phy_reg 114, isMove: 0
+in-flight renaming arch_reg 8 to phy_reg 115, isMove: 0
+instret:43  PC:0x1ffff000000000000000000008000010c  instr:0x00208f33   iType:Alu    [doCommitNormalInst [0]]       1832
+instret:44  PC:0x1ffff0000000000000000000080000110  instr:0x00000e93   iType:Alu    [doCommitNormalInst [1]]       1832
+Committing phy_reg: 106, to arch_reg: 30
+Freeing phy_reg: 30
+Committing phy_reg: 107, to arch_reg: 29
+Freeing phy_reg: 29
+in-flight renaming arch_reg 65 to phy_reg 116, isMove: 0
+in-flight renaming arch_reg 66 to phy_reg 117, isMove: 0
+instret:45  PC:0x1ffff0000000000000000000080000114  instr:0x00200193   iType:Alu    [doCommitNormalInst [0]]       1833
+instret:46  PC:0x1ffff0000000000000000000080000118  instr:0x4fdf1063   iType:Br    [doCommitNormalInst [1]]       1833
+Committing phy_reg: 108, to arch_reg: 3
+Freeing phy_reg: 88
+Freeing phy_reg: 109
+in-flight renaming arch_reg 94 to phy_reg 118, isMove: 0
+instret:47  PC:0x1ffff000000000000000000008000011c  instr:0x00100093   iType:Alu    [doCommitNormalInst [0]]       1834
+instret:48  PC:0x1ffff0000000000000000000080000120  instr:0x00100113   iType:Alu    [doCommitNormalInst [1]]       1834
+Committing phy_reg: 110, to arch_reg: 1
+Freeing phy_reg: 104
+Committing phy_reg: 111, to arch_reg: 2
+Freeing phy_reg: 105
+instret:49  PC:0x1ffff0000000000000000000080000124  instr:0x00208f33   iType:Alu    [doCommitNormalInst [0]]       1835
+instret:50  PC:0x1ffff0000000000000000000080000128  instr:0x00200e93   iType:Alu    [doCommitNormalInst [1]]       1835
+Committing phy_reg: 112, to arch_reg: 30
+Freeing phy_reg: 106
+Committing phy_reg: 113, to arch_reg: 29
+Freeing phy_reg: 107
+instret:51  PC:0x1ffff000000000000000000008000012c  instr:0x00300193   iType:Alu    [doCommitNormalInst [0]]       1836
+instret:52  PC:0x1ffff0000000000000000000080000130  instr:0x4ddf1463   iType:Br    [doCommitNormalInst [1]]       1836
+Committing phy_reg: 114, to arch_reg: 3
+Freeing phy_reg: 108
+Freeing phy_reg: 115
+instret:53  PC:0x1ffff0000000000000000000080000134  instr:0x00300093   iType:Alu    [doCommitNormalInst [0]]       1837
+instret:54  PC:0x1ffff0000000000000000000080000138  instr:0x00700113   iType:Alu    [doCommitNormalInst [1]]       1837
+Committing phy_reg: 116, to arch_reg: 1
+Freeing phy_reg: 110
+Committing phy_reg: 117, to arch_reg: 2
+Freeing phy_reg: 111
+instret:55  PC:0x1ffff000000000000000000008000013c  instr:0x00208f33   iType:Alu    [doCommitNormalInst [0]]       1838
+Committing phy_reg: 118, to arch_reg: 30
+Freeing phy_reg: 112
+in-flight renaming arch_reg 93 to phy_reg 119, isMove: 0
+in-flight renaming arch_reg 67 to phy_reg 120, isMove: 0
+in-flight renaming arch_reg 16 to phy_reg 121, isMove: 0
+in-flight renaming arch_reg 65 to phy_reg 122, isMove: 0
+in-flight renaming arch_reg 66 to phy_reg 123, isMove: 0
+in-flight renaming arch_reg 94 to phy_reg 124, isMove: 0
+in-flight renaming arch_reg 93 to phy_reg 125, isMove: 0
+in-flight renaming arch_reg 67 to phy_reg 126, isMove: 0
+in-flight renaming arch_reg 24 to phy_reg 127, isMove: 0
+in-flight renaming arch_reg 65 to phy_reg 5, isMove: 0
+instret:56  PC:0x1ffff0000000000000000000080000140  instr:0x00a00e93   iType:Alu    [doCommitNormalInst [0]]       1890
+instret:57  PC:0x1ffff0000000000000000000080000144  instr:0x00400193   iType:Alu    [doCommitNormalInst [1]]       1890
+Committing phy_reg: 119, to arch_reg: 29
+Freeing phy_reg: 113
+Committing phy_reg: 120, to arch_reg: 3
+Freeing phy_reg: 114
+in-flight renaming arch_reg 66 to phy_reg 11, isMove: 0
+in-flight renaming arch_reg 94 to phy_reg 10, isMove: 0
+instret:58  PC:0x1ffff0000000000000000000080000148  instr:0x4bdf1863   iType:Br    [doCommitNormalInst [0]]       1891
+instret:59  PC:0x1ffff000000000000000000008000014c  instr:0x00000093   iType:Alu    [doCommitNormalInst [1]]       1891
+Freeing phy_reg: 121
+Committing phy_reg: 122, to arch_reg: 1
+Freeing phy_reg: 116
+in-flight renaming arch_reg 93 to phy_reg 64, isMove: 0
+in-flight renaming arch_reg 67 to phy_reg 68, isMove: 0
+instret:60  PC:0x1ffff0000000000000000000080000150  instr:0xffff8137   iType:Alu    [doCommitNormalInst [0]]       1892
+Committing phy_reg: 123, to arch_reg: 2
+Freeing phy_reg: 117
+in-flight renaming arch_reg 0 to phy_reg 69, isMove: 0
+in-flight renaming arch_reg 65 to phy_reg 66, isMove: 0
+instret:61  PC:0x1ffff0000000000000000000080000154  instr:0x00208f33   iType:Alu    [doCommitNormalInst [0]]       1893
+instret:62  PC:0x1ffff0000000000000000000080000158  instr:0xffff8eb7   iType:Alu    [doCommitNormalInst [1]]       1893
+Committing phy_reg: 124, to arch_reg: 30
+Freeing phy_reg: 118
+Committing phy_reg: 125, to arch_reg: 29
+Freeing phy_reg: 119
+instret:63  PC:0x1ffff000000000000000000008000015c  instr:0x00500193   iType:Alu    [doCommitNormalInst [0]]       1894
+instret:64  PC:0x1ffff0000000000000000000080000160  instr:0x49df1c63   iType:Br    [doCommitNormalInst [1]]       1894
+Committing phy_reg: 126, to arch_reg: 3
+Freeing phy_reg: 120
+Freeing phy_reg: 127
+instret:65  PC:0x1ffff0000000000000000000080000164  instr:0x800000b7   iType:Alu    [doCommitNormalInst [0]]       1895
+instret:66  PC:0x1ffff0000000000000000000080000168  instr:0x00000113   iType:Alu    [doCommitNormalInst [1]]       1895
+Committing phy_reg: 5, to arch_reg: 1
+Freeing phy_reg: 122
+Committing phy_reg: 11, to arch_reg: 2
+Freeing phy_reg: 123
+instret:67  PC:0x1ffff000000000000000000008000016c  instr:0x00208f33   iType:Alu    [doCommitNormalInst [0]]       1896
+instret:68  PC:0x1ffff0000000000000000000080000170  instr:0x80000eb7   iType:Alu    [doCommitNormalInst [1]]       1896
+Committing phy_reg: 10, to arch_reg: 30
+Freeing phy_reg: 124
+Committing phy_reg: 64, to arch_reg: 29
+Freeing phy_reg: 125
+instret:69  PC:0x1ffff0000000000000000000080000174  instr:0x00600193   iType:Alu    [doCommitNormalInst [0]]       1897
+instret:70  PC:0x1ffff0000000000000000000080000178  instr:0x49df1063   iType:Br    [doCommitNormalInst [1]]       1897
+Committing phy_reg: 68, to arch_reg: 3
+Freeing phy_reg: 126
+Freeing phy_reg: 69
+instret:71  PC:0x1ffff000000000000000000008000017c  instr:0x800000b7   iType:Alu    [doCommitNormalInst [0]]       1898
+Committing phy_reg: 66, to arch_reg: 1
+Freeing phy_reg: 5
+in-flight renaming arch_reg 66 to phy_reg 71, isMove: 0
+in-flight renaming arch_reg 94 to phy_reg 67, isMove: 0
+in-flight renaming arch_reg 93 to phy_reg 72, isMove: 0
+in-flight renaming arch_reg 93 to phy_reg 74, isMove: 0
+in-flight renaming arch_reg 93 to phy_reg 75, isMove: 0
+in-flight renaming arch_reg 67 to phy_reg 73, isMove: 0
+in-flight renaming arch_reg 0 to phy_reg 76, isMove: 0
+in-flight renaming arch_reg 65 to phy_reg 78, isMove: 0
+in-flight renaming arch_reg 66 to phy_reg 77, isMove: 0
+in-flight renaming arch_reg 66 to phy_reg 79, isMove: 0
+instret:72  PC:0x1ffff0000000000000000000080000180  instr:0xffff8137   iType:Alu    [doCommitNormalInst [0]]       1949
+Committing phy_reg: 71, to arch_reg: 2
+Freeing phy_reg: 11
+in-flight renaming arch_reg 94 to phy_reg 80, isMove: 0
+in-flight renaming arch_reg 93 to phy_reg 81, isMove: 0
+instret:73  PC:0x1ffff0000000000000000000080000184  instr:0x00208f33   iType:Alu    [doCommitNormalInst [0]]       1950
+instret:74  PC:0x1ffff0000000000000000000080000188  instr:0xffff0eb7   iType:Alu    [doCommitNormalInst [1]]       1950
+Committing phy_reg: 67, to arch_reg: 30
+Freeing phy_reg: 10
+Committing phy_reg: 72, to arch_reg: 29
+Freeing phy_reg: 64
+in-flight renaming arch_reg 93 to phy_reg 82, isMove: 0
+in-flight renaming arch_reg 67 to phy_reg 84, isMove: 0
+instret:75  PC:0x1ffff000000000000000000008000018c  instr:0xfffe8e9b   iType:Alu    [doCommitNormalInst [0]]       1951
+Committing phy_reg: 74, to arch_reg: 29
+Freeing phy_reg: 72
+in-flight renaming arch_reg 0 to phy_reg 85, isMove: 0
+in-flight renaming arch_reg 65 to phy_reg 86, isMove: 0
+instret:76  PC:0x1ffff0000000000000000000080000190  instr:0x00fe9e93   iType:Alu    [doCommitNormalInst [0]]       1952
+instret:77  PC:0x1ffff0000000000000000000080000194  instr:0x00700193   iType:Alu    [doCommitNormalInst [1]]       1952
+Committing phy_reg: 75, to arch_reg: 29
+Freeing phy_reg: 74
+Committing phy_reg: 73, to arch_reg: 3
+Freeing phy_reg: 68
+instret:78  PC:0x1ffff0000000000000000000080000198  instr:0x47df1063   iType:Br    [doCommitNormalInst [0]]       1953
+instret:79  PC:0x1ffff000000000000000000008000019c  instr:0x00000093   iType:Alu    [doCommitNormalInst [1]]       1953
+Freeing phy_reg: 76
+Committing phy_reg: 78, to arch_reg: 1
+Freeing phy_reg: 66
+instret:80  PC:0x1ffff00000000000000000000800001a0  instr:0x00008137   iType:Alu    [doCommitNormalInst [0]]       1954
+Committing phy_reg: 77, to arch_reg: 2
+Freeing phy_reg: 71
+instret:81  PC:0x1ffff00000000000000000000800001a4  instr:0xfff1011b   iType:Alu    [doCommitNormalInst [0]]       1955
+Committing phy_reg: 79, to arch_reg: 2
+Freeing phy_reg: 77
+instret:82  PC:0x1ffff00000000000000000000800001a8  instr:0x00208f33   iType:Alu    [doCommitNormalInst [0]]       1956
+instret:83  PC:0x1ffff00000000000000000000800001ac  instr:0x00008eb7   iType:Alu    [doCommitNormalInst [1]]       1956
+Committing phy_reg: 80, to arch_reg: 30
+Freeing phy_reg: 67
+Committing phy_reg: 81, to arch_reg: 29
+Freeing phy_reg: 75
+instret:84  PC:0x1ffff00000000000000000000800001b0  instr:0xfffe8e9b   iType:Alu    [doCommitNormalInst [0]]       1957
+instret:85  PC:0x1ffff00000000000000000000800001b4  instr:0x00800193   iType:Alu    [doCommitNormalInst [1]]       1957
+Committing phy_reg: 82, to arch_reg: 29
+Freeing phy_reg: 81
+Committing phy_reg: 84, to arch_reg: 3
+Freeing phy_reg: 73
+instret:86  PC:0x1ffff00000000000000000000800001b8  instr:0x45df1063   iType:Br    [doCommitNormalInst [0]]       1958
+instret:87  PC:0x1ffff00000000000000000000800001bc  instr:0x800000b7   iType:Alu    [doCommitNormalInst [1]]       1958
+Freeing phy_reg: 85
+Committing phy_reg: 86, to arch_reg: 1
+Freeing phy_reg: 78
+in-flight renaming arch_reg 65 to phy_reg 87, isMove: 0
+in-flight renaming arch_reg 66 to phy_reg 3, isMove: 0
+in-flight renaming arch_reg 94 to phy_reg 83, isMove: 0
+in-flight renaming arch_reg 93 to phy_reg 89, isMove: 0
+in-flight renaming arch_reg 93 to phy_reg 91, isMove: 0
+in-flight renaming arch_reg 67 to phy_reg 70, isMove: 0
+in-flight renaming arch_reg 0 to phy_reg 92, isMove: 0
+in-flight renaming arch_reg 65 to phy_reg 94, isMove: 0
+in-flight renaming arch_reg 65 to phy_reg 90, isMove: 0
+in-flight renaming arch_reg 66 to phy_reg 95, isMove: 0
+instret:88  PC:0x1ffff00000000000000000000800001c0  instr:0xfff0809b   iType:Alu    [doCommitNormalInst [0]]       2008
+instret:89  PC:0x1ffff00000000000000000000800001c4  instr:0x00000113   iType:Alu    [doCommitNormalInst [1]]       2008
+Committing phy_reg: 87, to arch_reg: 1
+Freeing phy_reg: 86
+Committing phy_reg: 3, to arch_reg: 2
+Freeing phy_reg: 79
+in-flight renaming arch_reg 66 to phy_reg 97, isMove: 0
+in-flight renaming arch_reg 94 to phy_reg 98, isMove: 0
+instret:90  PC:0x1ffff00000000000000000000800001c8  instr:0x00208f33   iType:Alu    [doCommitNormalInst [0]]       2009
+instret:91  PC:0x1ffff00000000000000000000800001cc  instr:0x80000eb7   iType:Alu    [doCommitNormalInst [1]]       2009
+Committing phy_reg: 83, to arch_reg: 30
+Freeing phy_reg: 80
+Committing phy_reg: 89, to arch_reg: 29
+Freeing phy_reg: 82
+in-flight renaming arch_reg 93 to phy_reg 96, isMove: 0
+in-flight renaming arch_reg 93 to phy_reg 99, isMove: 0
+instret:92  PC:0x1ffff00000000000000000000800001d0  instr:0xfffe8e9b   iType:Alu    [doCommitNormalInst [0]]       2010
+instret:93  PC:0x1ffff00000000000000000000800001d4  instr:0x00900193   iType:Alu    [doCommitNormalInst [1]]       2010
+Committing phy_reg: 91, to arch_reg: 29
+Freeing phy_reg: 89
+Committing phy_reg: 70, to arch_reg: 3
+Freeing phy_reg: 84
+in-flight renaming arch_reg 93 to phy_reg 101, isMove: 0
+in-flight renaming arch_reg 93 to phy_reg 93, isMove: 0
+instret:94  PC:0x1ffff00000000000000000000800001d8  instr:0x43df1063   iType:Br    [doCommitNormalInst [0]]       2011
+instret:95  PC:0x1ffff00000000000000000000800001dc  instr:0x800000b7   iType:Alu    [doCommitNormalInst [1]]       2011
+Freeing phy_reg: 92
+Committing phy_reg: 94, to arch_reg: 1
+Freeing phy_reg: 87
+instret:96  PC:0x1ffff00000000000000000000800001e0  instr:0xfff0809b   iType:Alu    [doCommitNormalInst [0]]       2012
+instret:97  PC:0x1ffff00000000000000000000800001e4  instr:0x00008137   iType:Alu    [doCommitNormalInst [1]]       2012
+Committing phy_reg: 90, to arch_reg: 1
+Freeing phy_reg: 94
+Committing phy_reg: 95, to arch_reg: 2
+Freeing phy_reg: 3
+instret:98  PC:0x1ffff00000000000000000000800001e8  instr:0xfff1011b   iType:Alu    [doCommitNormalInst [0]]       2013
+Committing phy_reg: 97, to arch_reg: 2
+Freeing phy_reg: 95
+instret:99  PC:0x1ffff00000000000000000000800001ec  instr:0x00208f33   iType:Alu    [doCommitNormalInst [0]]       2014
+instret:100  PC:0x1ffff00000000000000000000800001f0  instr:0x00010eb7   iType:Alu    [doCommitNormalInst [1]]       2014
+Committing phy_reg: 98, to arch_reg: 30
+Freeing phy_reg: 83
+Committing phy_reg: 96, to arch_reg: 29
+Freeing phy_reg: 91
+instret:101  PC:0x1ffff00000000000000000000800001f4  instr:0x001e8e9b   iType:Alu    [doCommitNormalInst [0]]       2015
+Committing phy_reg: 99, to arch_reg: 29
+Freeing phy_reg: 96
+instret:102  PC:0x1ffff00000000000000000000800001f8  instr:0x00fe9e93   iType:Alu    [doCommitNormalInst [0]]       2016
+Committing phy_reg: 101, to arch_reg: 29
+Freeing phy_reg: 99
+instret:103  PC:0x1ffff00000000000000000000800001fc  instr:0xffee8e93   iType:Alu    [doCommitNormalInst [0]]       2017
+Committing phy_reg: 93, to arch_reg: 29
+Freeing phy_reg: 101
+in-flight renaming arch_reg 67 to phy_reg 103, isMove: 0
+in-flight renaming arch_reg 20 to phy_reg 1, isMove: 0
+in-flight renaming arch_reg 65 to phy_reg 2, isMove: 0
+in-flight renaming arch_reg 66 to phy_reg 30, isMove: 0
+in-flight renaming arch_reg 66 to phy_reg 29, isMove: 0
+in-flight renaming arch_reg 94 to phy_reg 88, isMove: 0
+in-flight renaming arch_reg 93 to phy_reg 109, isMove: 0
+in-flight renaming arch_reg 93 to phy_reg 104, isMove: 0
+in-flight renaming arch_reg 67 to phy_reg 105, isMove: 0
+in-flight renaming arch_reg 20 to phy_reg 106, isMove: 0
+instret:104  PC:0x1ffff0000000000000000000080000200  instr:0x00a00193   iType:Alu    [doCommitNormalInst [0]]       2067
+instret:105  PC:0x1ffff0000000000000000000080000204  instr:0x3fdf1a63   iType:Br    [doCommitNormalInst [1]]       2067
+Committing phy_reg: 103, to arch_reg: 3
+Freeing phy_reg: 70
+Freeing phy_reg: 1
+in-flight renaming arch_reg 65 to phy_reg 107, isMove: 0
+in-flight renaming arch_reg 65 to phy_reg 108, isMove: 0
+instret:106  PC:0x1ffff0000000000000000000080000208  instr:0x800000b7   iType:Alu    [doCommitNormalInst [0]]       2068
+instret:107  PC:0x1ffff000000000000000000008000020c  instr:0x00008137   iType:Alu    [doCommitNormalInst [1]]       2068
+Committing phy_reg: 2, to arch_reg: 1
+Freeing phy_reg: 90
+Committing phy_reg: 30, to arch_reg: 2
+Freeing phy_reg: 97
+in-flight renaming arch_reg 66 to phy_reg 115, isMove: 0
+in-flight renaming arch_reg 94 to phy_reg 110, isMove: 0
+instret:108  PC:0x1ffff0000000000000000000080000210  instr:0xfff1011b   iType:Alu    [doCommitNormalInst [0]]       2069
+Committing phy_reg: 29, to arch_reg: 2
+Freeing phy_reg: 30
+in-flight renaming arch_reg 93 to phy_reg 111, isMove: 0
+in-flight renaming arch_reg 93 to phy_reg 112, isMove: 0
+instret:109  PC:0x1ffff0000000000000000000080000214  instr:0x00208f33   iType:Alu    [doCommitNormalInst [0]]       2070
+instret:110  PC:0x1ffff0000000000000000000080000218  instr:0x80008eb7   iType:Alu    [doCommitNormalInst [1]]       2070
+Committing phy_reg: 88, to arch_reg: 30
+Freeing phy_reg: 98
+Committing phy_reg: 109, to arch_reg: 29
+Freeing phy_reg: 93
+instret:111  PC:0x1ffff000000000000000000008000021c  instr:0xfffe8e9b   iType:Alu    [doCommitNormalInst [0]]       2071
+instret:112  PC:0x1ffff0000000000000000000080000220  instr:0x00b00193   iType:Alu    [doCommitNormalInst [1]]       2071
+Committing phy_reg: 104, to arch_reg: 29
+Freeing phy_reg: 109
+Committing phy_reg: 105, to arch_reg: 3
+Freeing phy_reg: 103
+instret:113  PC:0x1ffff0000000000000000000080000224  instr:0x3ddf1a63   iType:Br    [doCommitNormalInst [0]]       2072
+instret:114  PC:0x1ffff0000000000000000000080000228  instr:0x800000b7   iType:Alu    [doCommitNormalInst [1]]       2072
+Freeing phy_reg: 106
+Committing phy_reg: 107, to arch_reg: 1
+Freeing phy_reg: 2
+instret:115  PC:0x1ffff000000000000000000008000022c  instr:0xfff0809b   iType:Alu    [doCommitNormalInst [0]]       2073
+instret:116  PC:0x1ffff0000000000000000000080000230  instr:0xffff8137   iType:Alu    [doCommitNormalInst [1]]       2073
+Committing phy_reg: 108, to arch_reg: 1
+Freeing phy_reg: 107
+Committing phy_reg: 115, to arch_reg: 2
+Freeing phy_reg: 29
+instret:117  PC:0x1ffff0000000000000000000080000234  instr:0x00208f33   iType:Alu    [doCommitNormalInst [0]]       2074
+instret:118  PC:0x1ffff0000000000000000000080000238  instr:0x7fff8eb7   iType:Alu    [doCommitNormalInst [1]]       2074
+Committing phy_reg: 110, to arch_reg: 30
+Freeing phy_reg: 88
+Committing phy_reg: 111, to arch_reg: 29
+Freeing phy_reg: 104
+instret:119  PC:0x1ffff000000000000000000008000023c  instr:0xfffe8e9b   iType:Alu    [doCommitNormalInst [0]]       2075
+Committing phy_reg: 112, to arch_reg: 29
+Freeing phy_reg: 111
+in-flight renaming arch_reg 67 to phy_reg 113, isMove: 0
+in-flight renaming arch_reg 20 to phy_reg 114, isMove: 0
+in-flight renaming arch_reg 65 to phy_reg 121, isMove: 0
+in-flight renaming arch_reg 66 to phy_reg 116, isMove: 0
+in-flight renaming arch_reg 94 to phy_reg 117, isMove: 0
+in-flight renaming arch_reg 93 to phy_reg 118, isMove: 0
+in-flight renaming arch_reg 67 to phy_reg 119, isMove: 0
+in-flight renaming arch_reg 28 to phy_reg 120, isMove: 0
+in-flight renaming arch_reg 65 to phy_reg 127, isMove: 0
+in-flight renaming arch_reg 66 to phy_reg 122, isMove: 0
+instret:120  PC:0x1ffff0000000000000000000080000240  instr:0x00c00193   iType:Alu    [doCommitNormalInst [0]]       2126
+instret:121  PC:0x1ffff0000000000000000000080000244  instr:0x3bdf1a63   iType:Br    [doCommitNormalInst [1]]       2126
+Committing phy_reg: 113, to arch_reg: 3
+Freeing phy_reg: 105
+Freeing phy_reg: 114
+in-flight renaming arch_reg 94 to phy_reg 123, isMove: 0
+in-flight renaming arch_reg 93 to phy_reg 124, isMove: 0
+instret:122  PC:0x1ffff0000000000000000000080000248  instr:0x00000093   iType:Alu    [doCommitNormalInst [0]]       2127
+instret:123  PC:0x1ffff000000000000000000008000024c  instr:0xfff00113   iType:Alu    [doCommitNormalInst [1]]       2127
+Committing phy_reg: 121, to arch_reg: 1
+Freeing phy_reg: 108
+Committing phy_reg: 116, to arch_reg: 2
+Freeing phy_reg: 115
+in-flight renaming arch_reg 67 to phy_reg 125, isMove: 0
+in-flight renaming arch_reg 4 to phy_reg 126, isMove: 0
+instret:124  PC:0x1ffff0000000000000000000080000250  instr:0x00208f33   iType:Alu    [doCommitNormalInst [0]]       2128
+instret:125  PC:0x1ffff0000000000000000000080000254  instr:0xfff00e93   iType:Alu    [doCommitNormalInst [1]]       2128
+Committing phy_reg: 117, to arch_reg: 30
+Freeing phy_reg: 110
+Committing phy_reg: 118, to arch_reg: 29
+Freeing phy_reg: 112
+in-flight renaming arch_reg 65 to phy_reg 69, isMove: 0
+in-flight renaming arch_reg 66 to phy_reg 5, isMove: 0
+instret:126  PC:0x1ffff0000000000000000000080000258  instr:0x00d00193   iType:Alu    [doCommitNormalInst [0]]       2129
+instret:127  PC:0x1ffff000000000000000000008000025c  instr:0x39df1e63   iType:Br    [doCommitNormalInst [1]]       2129
+Committing phy_reg: 119, to arch_reg: 3
+Freeing phy_reg: 113
+Freeing phy_reg: 120
+instret:128  PC:0x1ffff0000000000000000000080000260  instr:0xfff00093   iType:Alu    [doCommitNormalInst [0]]       2130
+instret:129  PC:0x1ffff0000000000000000000080000264  instr:0x00100113   iType:Alu    [doCommitNormalInst [1]]       2130
+Committing phy_reg: 127, to arch_reg: 1
+Freeing phy_reg: 121
+Committing phy_reg: 122, to arch_reg: 2
+Freeing phy_reg: 116
+instret:130  PC:0x1ffff0000000000000000000080000268  instr:0x00208f33   iType:Alu    [doCommitNormalInst [0]]       2131
+instret:131  PC:0x1ffff000000000000000000008000026c  instr:0x00000e93   iType:Alu    [doCommitNormalInst [1]]       2131
+Committing phy_reg: 123, to arch_reg: 30
+Freeing phy_reg: 117
+Committing phy_reg: 124, to arch_reg: 29
+Freeing phy_reg: 118
+instret:132  PC:0x1ffff0000000000000000000080000270  instr:0x00e00193   iType:Alu    [doCommitNormalInst [0]]       2132
+instret:133  PC:0x1ffff0000000000000000000080000274  instr:0x39df1263   iType:Br    [doCommitNormalInst [1]]       2132
+Committing phy_reg: 125, to arch_reg: 3
+Freeing phy_reg: 119
+Freeing phy_reg: 126
+instret:134  PC:0x1ffff0000000000000000000080000278  instr:0xfff00093   iType:Alu    [doCommitNormalInst [0]]       2133
+instret:135  PC:0x1ffff000000000000000000008000027c  instr:0xfff00113   iType:Alu    [doCommitNormalInst [1]]       2133
+Committing phy_reg: 69, to arch_reg: 1
+Freeing phy_reg: 127
+Committing phy_reg: 5, to arch_reg: 2
+Freeing phy_reg: 122
+in-flight renaming arch_reg 94 to phy_reg 11, isMove: 0
+in-flight renaming arch_reg 93 to phy_reg 10, isMove: 0
+in-flight renaming arch_reg 67 to phy_reg 64, isMove: 0
+in-flight renaming arch_reg 12 to phy_reg 72, isMove: 0
+in-flight renaming arch_reg 65 to phy_reg 74, isMove: 0
+in-flight renaming arch_reg 66 to phy_reg 68, isMove: 0
+in-flight renaming arch_reg 66 to phy_reg 76, isMove: 0
+in-flight renaming arch_reg 94 to phy_reg 66, isMove: 0
+in-flight renaming arch_reg 93 to phy_reg 71, isMove: 0
+in-flight renaming arch_reg 93 to phy_reg 77, isMove: 0
+instret:136  PC:0x1ffff0000000000000000000080000280  instr:0x00208f33   iType:Alu    [doCommitNormalInst [0]]       2185
+instret:137  PC:0x1ffff0000000000000000000080000284  instr:0xffe00e93   iType:Alu    [doCommitNormalInst [1]]       2185
+Committing phy_reg: 11, to arch_reg: 30
+Freeing phy_reg: 123
+Committing phy_reg: 10, to arch_reg: 29
+Freeing phy_reg: 124
+in-flight renaming arch_reg 67 to phy_reg 67, isMove: 0
+in-flight renaming arch_reg 12 to phy_reg 75, isMove: 0
+instret:138  PC:0x1ffff0000000000000000000080000288  instr:0x00f00193   iType:Alu    [doCommitNormalInst [0]]       2186
+instret:139  PC:0x1ffff000000000000000000008000028c  instr:0x37df1663   iType:Br    [doCommitNormalInst [1]]       2186
+Committing phy_reg: 64, to arch_reg: 3
+Freeing phy_reg: 125
+Freeing phy_reg: 72
+in-flight renaming arch_reg 65 to phy_reg 81, isMove: 0
+in-flight renaming arch_reg 66 to phy_reg 73, isMove: 0
+instret:140  PC:0x1ffff0000000000000000000080000290  instr:0x00100093   iType:Alu    [doCommitNormalInst [0]]       2187
+instret:141  PC:0x1ffff0000000000000000000080000294  instr:0x80000137   iType:Alu    [doCommitNormalInst [1]]       2187
+Committing phy_reg: 74, to arch_reg: 1
+Freeing phy_reg: 69
+Committing phy_reg: 68, to arch_reg: 2
+Freeing phy_reg: 5
+in-flight renaming arch_reg 65 to phy_reg 85, isMove: 0
+in-flight renaming arch_reg 93 to phy_reg 78, isMove: 0
+instret:142  PC:0x1ffff0000000000000000000080000298  instr:0xfff1011b   iType:Alu    [doCommitNormalInst [0]]       2188
+Committing phy_reg: 76, to arch_reg: 2
+Freeing phy_reg: 68
+instret:143  PC:0x1ffff000000000000000000008000029c  instr:0x00208f33   iType:Alu    [doCommitNormalInst [0]]       2189
+instret:144  PC:0x1ffff00000000000000000000800002a0  instr:0x00100e9b   iType:Alu    [doCommitNormalInst [1]]       2189
+Committing phy_reg: 66, to arch_reg: 30
+Freeing phy_reg: 11
+Committing phy_reg: 71, to arch_reg: 29
+Freeing phy_reg: 10
+instret:145  PC:0x1ffff00000000000000000000800002a4  instr:0x01fe9e93   iType:Alu    [doCommitNormalInst [0]]       2190
+instret:146  PC:0x1ffff00000000000000000000800002a8  instr:0x01000193   iType:Alu    [doCommitNormalInst [1]]       2190
+Committing phy_reg: 77, to arch_reg: 29
+Freeing phy_reg: 71
+Committing phy_reg: 67, to arch_reg: 3
+Freeing phy_reg: 64
+instret:147  PC:0x1ffff00000000000000000000800002ac  instr:0x35df1663   iType:Br    [doCommitNormalInst [0]]       2191
+instret:148  PC:0x1ffff00000000000000000000800002b0  instr:0x00d00093   iType:Alu    [doCommitNormalInst [1]]       2191
+Freeing phy_reg: 75
+Committing phy_reg: 81, to arch_reg: 1
+Freeing phy_reg: 74
+instret:149  PC:0x1ffff00000000000000000000800002b4  instr:0x00b00113   iType:Alu    [doCommitNormalInst [0]]       2192
+Committing phy_reg: 73, to arch_reg: 2
+Freeing phy_reg: 76
+instret:150  PC:0x1ffff00000000000000000000800002b8  instr:0x002080b3   iType:Alu    [doCommitNormalInst [0]]       2193
+instret:151  PC:0x1ffff00000000000000000000800002bc  instr:0x01800e93   iType:Alu    [doCommitNormalInst [1]]       2193
+Committing phy_reg: 85, to arch_reg: 1
+Freeing phy_reg: 81
+Committing phy_reg: 78, to arch_reg: 29
+Freeing phy_reg: 77
+in-flight renaming arch_reg 67 to phy_reg 86, isMove: 0
+in-flight renaming arch_reg 20 to phy_reg 79, isMove: 0
+in-flight renaming arch_reg 65 to phy_reg 80, isMove: 0
+in-flight renaming arch_reg 66 to phy_reg 82, isMove: 0
+in-flight renaming arch_reg 66 to phy_reg 89, isMove: 0
+in-flight renaming arch_reg 93 to phy_reg 84, isMove: 0
+in-flight renaming arch_reg 67 to phy_reg 92, isMove: 0
+in-flight renaming arch_reg 28 to phy_reg 87, isMove: 0
+in-flight renaming arch_reg 65 to phy_reg 94, isMove: 0
+in-flight renaming arch_reg 65 to phy_reg 3, isMove: 0
+instret:152  PC:0x1ffff00000000000000000000800002c0  instr:0x01100193   iType:Alu    [doCommitNormalInst [0]]       2244
+instret:153  PC:0x1ffff00000000000000000000800002c4  instr:0x33d09a63   iType:Br    [doCommitNormalInst [1]]       2244
+Committing phy_reg: 86, to arch_reg: 3
+Freeing phy_reg: 67
+Freeing phy_reg: 79
+in-flight renaming arch_reg 93 to phy_reg 95, isMove: 0
+in-flight renaming arch_reg 67 to phy_reg 83, isMove: 0
+instret:154  PC:0x1ffff00000000000000000000800002c8  instr:0x00e00093   iType:Alu    [doCommitNormalInst [0]]       2245
+instret:155  PC:0x1ffff00000000000000000000800002cc  instr:0x00b00113   iType:Alu    [doCommitNormalInst [1]]       2245
+Committing phy_reg: 80, to arch_reg: 1
+Freeing phy_reg: 85
+Committing phy_reg: 82, to arch_reg: 2
+Freeing phy_reg: 73
+in-flight renaming arch_reg 8 to phy_reg 91, isMove: 0
+in-flight renaming arch_reg 68 to phy_reg 96, isMove: 0
+instret:156  PC:0x1ffff00000000000000000000800002d0  instr:0x00208133   iType:Alu    [doCommitNormalInst [0]]       2246
+instret:157  PC:0x1ffff00000000000000000000800002d4  instr:0x01900e93   iType:Alu    [doCommitNormalInst [1]]       2246
+Committing phy_reg: 89, to arch_reg: 2
+Freeing phy_reg: 82
+Committing phy_reg: 84, to arch_reg: 29
+Freeing phy_reg: 78
+in-flight renaming arch_reg 65 to phy_reg 99, isMove: 0
+in-flight renaming arch_reg 66 to phy_reg 101, isMove: 0
+instret:158  PC:0x1ffff00000000000000000000800002d8  instr:0x01200193   iType:Alu    [doCommitNormalInst [0]]       2247
+instret:159  PC:0x1ffff00000000000000000000800002dc  instr:0x31d11e63   iType:Br    [doCommitNormalInst [1]]       2247
+Committing phy_reg: 92, to arch_reg: 3
+Freeing phy_reg: 86
+Freeing phy_reg: 87
+instret:160  PC:0x1ffff00000000000000000000800002e0  instr:0x00d00093   iType:Alu    [doCommitNormalInst [0]]       2248
+Committing phy_reg: 94, to arch_reg: 1
+Freeing phy_reg: 80
+instret:161  PC:0x1ffff00000000000000000000800002e4  instr:0x001080b3   iType:Alu    [doCommitNormalInst [0]]       2249
+instret:162  PC:0x1ffff00000000000000000000800002e8  instr:0x01a00e93   iType:Alu    [doCommitNormalInst [1]]       2249
+Committing phy_reg: 3, to arch_reg: 1
+Freeing phy_reg: 94
+Committing phy_reg: 95, to arch_reg: 29
+Freeing phy_reg: 84
+instret:163  PC:0x1ffff00000000000000000000800002ec  instr:0x01300193   iType:Alu    [doCommitNormalInst [0]]       2250
+instret:164  PC:0x1ffff00000000000000000000800002f0  instr:0x31d09463   iType:Br    [doCommitNormalInst [1]]       2250
+Committing phy_reg: 83, to arch_reg: 3
+Freeing phy_reg: 92
+Freeing phy_reg: 91
+instret:165  PC:0x1ffff00000000000000000000800002f4  instr:0x00000213   iType:Alu    [doCommitNormalInst [0]]       2251
+instret:166  PC:0x1ffff00000000000000000000800002f8  instr:0x00d00093   iType:Alu    [doCommitNormalInst [1]]       2251
+Committing phy_reg: 96, to arch_reg: 4
+Freeing phy_reg: 4
+Committing phy_reg: 99, to arch_reg: 1
+Freeing phy_reg: 3
+instret:167  PC:0x1ffff00000000000000000000800002fc  instr:0x00b00113   iType:Alu    [doCommitNormalInst [0]]       2252
+Committing phy_reg: 101, to arch_reg: 2
+Freeing phy_reg: 89
+in-flight renaming arch_reg 94 to phy_reg 70, isMove: 0
+in-flight renaming arch_reg 70 to phy_reg 1, isMove: 0
+in-flight renaming arch_reg 68 to phy_reg 90, isMove: 0
+in-flight renaming arch_reg 69 to phy_reg 97, isMove: 0
+in-flight renaming arch_reg 9 to phy_reg 30, isMove: 0
+in-flight renaming arch_reg 93 to phy_reg 98, isMove: 0
+in-flight renaming arch_reg 67 to phy_reg 93, isMove: 0
+in-flight renaming arch_reg 28 to phy_reg 109, isMove: 0
+in-flight renaming arch_reg 68 to phy_reg 103, isMove: 0
+in-flight renaming arch_reg 65 to phy_reg 106, isMove: 0
+instret:168  PC:0x1ffff0000000000000000000080000300  instr:0x00208f33   iType:Alu    [doCommitNormalInst [0]]       2303
+Committing phy_reg: 70, to arch_reg: 30
+Freeing phy_reg: 66
+in-flight renaming arch_reg 66 to phy_reg 2, isMove: 0
+in-flight renaming arch_reg 94 to phy_reg 107, isMove: 0
+instret:169  PC:0x1ffff0000000000000000000080000304  instr:0x000f0313   iType:Alu    [doCommitNormalInst [0]]       2304
+instret:170  PC:0x1ffff0000000000000000000080000308  instr:0x00120213   iType:Alu    [doCommitNormalInst [1]]       2304
+Committing phy_reg: 1, to arch_reg: 6
+Freeing phy_reg: 6
+Committing phy_reg: 90, to arch_reg: 4
+Freeing phy_reg: 96
+in-flight renaming arch_reg 0 to phy_reg 29, isMove: 0
+in-flight renaming arch_reg 70 to phy_reg 88, isMove: 0
+instret:171  PC:0x1ffff000000000000000000008000030c  instr:0x00200293   iType:Alu    [doCommitNormalInst [0]]       2305
+Committing phy_reg: 97, to arch_reg: 5
+Freeing phy_reg: 100
+wrongSpec - freeing phy reg 109 (slot 46)
+wrongSpec - freeing phy reg 103 (slot 47)
+wrongSpec - freeing phy reg 106 (slot 48)
+wrongSpec - freeing phy reg 2 (slot 49)
+wrongSpec - freeing phy reg 107 (slot 50)
+wrongSpec - freeing phy reg 29 (slot 51)
+wrongSpec - freeing phy reg 88 (slot 52)
+wrongSpec - freeing phy reg 111 (slot 53)
+wrongSpec - freeing phy reg 112 (slot 54)
+instret:172  PC:0x1ffff0000000000000000000080000310  instr:0xfe5214e3   iType:Br    [doCommitNormalInst [0]]       2307
+Freeing phy_reg: 30
+in-flight renaming arch_reg 65 to phy_reg 98, isMove: 0
+in-flight renaming arch_reg 66 to phy_reg 93, isMove: 0
+in-flight renaming arch_reg 94 to phy_reg 109, isMove: 0
+in-flight renaming arch_reg 70 to phy_reg 103, isMove: 0
+in-flight renaming arch_reg 68 to phy_reg 106, isMove: 0
+in-flight renaming arch_reg 69 to phy_reg 2, isMove: 0
+in-flight renaming arch_reg 9 to phy_reg 107, isMove: 0
+instret:173  PC:0x1ffff00000000000000000000800002f8  instr:0x00d00093   iType:Alu    [doCommitNormalInst [0]]       2364
+instret:174  PC:0x1ffff00000000000000000000800002fc  instr:0x00b00113   iType:Alu    [doCommitNormalInst [1]]       2364
+Committing phy_reg: 98, to arch_reg: 1
+Freeing phy_reg: 99
+Committing phy_reg: 93, to arch_reg: 2
+Freeing phy_reg: 101
+instret:175  PC:0x1ffff0000000000000000000080000300  instr:0x00208f33   iType:Alu    [doCommitNormalInst [0]]       2365
+Committing phy_reg: 109, to arch_reg: 30
+Freeing phy_reg: 70
+in-flight renaming arch_reg 93 to phy_reg 29, isMove: 0
+in-flight renaming arch_reg 67 to phy_reg 88, isMove: 0
+instret:176  PC:0x1ffff0000000000000000000080000304  instr:0x000f0313   iType:Alu    [doCommitNormalInst [0]]       2366
+instret:177  PC:0x1ffff0000000000000000000080000308  instr:0x00120213   iType:Alu    [doCommitNormalInst [1]]       2366
+Committing phy_reg: 103, to arch_reg: 6
+Freeing phy_reg: 1
+Committing phy_reg: 106, to arch_reg: 4
+Freeing phy_reg: 90
+in-flight renaming arch_reg 28 to phy_reg 104, isMove: 0
+in-flight renaming arch_reg 68 to phy_reg 111, isMove: 0
+instret:178  PC:0x1ffff000000000000000000008000030c  instr:0x00200293   iType:Alu    [doCommitNormalInst [0]]       2367
+Committing phy_reg: 2, to arch_reg: 5
+Freeing phy_reg: 97
+in-flight renaming arch_reg 65 to phy_reg 105, isMove: 0
+in-flight renaming arch_reg 66 to phy_reg 114, isMove: 0
+instret:179  PC:0x1ffff0000000000000000000080000310  instr:0xfe5214e3   iType:Br    [doCommitNormalInst [0]]       2368
+Freeing phy_reg: 107
+in-flight renaming arch_reg 94 to phy_reg 108, isMove: 0
+in-flight renaming arch_reg 0 to phy_reg 115, isMove: 0
+in-flight renaming arch_reg 70 to phy_reg 110, isMove: 0
+in-flight renaming arch_reg 68 to phy_reg 112, isMove: 0
+instret:180  PC:0x1ffff0000000000000000000080000314  instr:0x01800e93   iType:Alu    [doCommitNormalInst [0]]       2370
+instret:181  PC:0x1ffff0000000000000000000080000318  instr:0x01400193   iType:Alu    [doCommitNormalInst [1]]       2370
+Committing phy_reg: 29, to arch_reg: 29
+Freeing phy_reg: 95
+Committing phy_reg: 88, to arch_reg: 3
+Freeing phy_reg: 83
+in-flight renaming arch_reg 69 to phy_reg 113, isMove: 0
+instret:182  PC:0x1ffff000000000000000000008000031c  instr:0x2dd31e63   iType:Br    [doCommitNormalInst [0]]       2371
+instret:183  PC:0x1ffff0000000000000000000080000320  instr:0x00000213   iType:Alu    [doCommitNormalInst [1]]       2371
+Freeing phy_reg: 104
+Committing phy_reg: 111, to arch_reg: 4
+Freeing phy_reg: 106
+in-flight renaming arch_reg 5 to phy_reg 120, isMove: 0
+in-flight renaming arch_reg 93 to phy_reg 121, isMove: 0
+instret:184  PC:0x1ffff0000000000000000000080000324  instr:0x00e00093   iType:Alu    [doCommitNormalInst [0]]       2372
+instret:185  PC:0x1ffff0000000000000000000080000328  instr:0x00b00113   iType:Alu    [doCommitNormalInst [1]]       2372
+Committing phy_reg: 105, to arch_reg: 1
+Freeing phy_reg: 98
+Committing phy_reg: 114, to arch_reg: 2
+Freeing phy_reg: 93
+in-flight renaming arch_reg 67 to phy_reg 116, isMove: 0
+in-flight renaming arch_reg 12 to phy_reg 117, isMove: 0
+instret:186  PC:0x1ffff000000000000000000008000032c  instr:0x00208f33   iType:Alu    [doCommitNormalInst [0]]       2373
+instret:187  PC:0x1ffff0000000000000000000080000330  instr:0x00000013   iType:Alu    [doCommitNormalInst [1]]       2373
+Committing phy_reg: 108, to arch_reg: 30
+Freeing phy_reg: 109
+Freeing phy_reg: 115
+in-flight renaming arch_reg 68 to phy_reg 118, isMove: 0
+in-flight renaming arch_reg 65 to phy_reg 119, isMove: 0
+instret:188  PC:0x1ffff0000000000000000000080000334  instr:0x000f0313   iType:Alu    [doCommitNormalInst [0]]       2374
+instret:189  PC:0x1ffff0000000000000000000080000338  instr:0x00120213   iType:Alu    [doCommitNormalInst [1]]       2374
+Committing phy_reg: 110, to arch_reg: 6
+Freeing phy_reg: 103
+Committing phy_reg: 112, to arch_reg: 4
+Freeing phy_reg: 111
+in-flight renaming arch_reg 66 to phy_reg 126, isMove: 0
+in-flight renaming arch_reg 94 to phy_reg 127, isMove: 0
+instret:190  PC:0x1ffff000000000000000000008000033c  instr:0x00200293   iType:Alu    [doCommitNormalInst [0]]       2375
+Committing phy_reg: 113, to arch_reg: 5
+Freeing phy_reg: 2
+instret:191  PC:0x1ffff0000000000000000000080000340  instr:0xfe5212e3   iType:Br    [doCommitNormalInst [0]]       2377
+Freeing phy_reg: 120
+in-flight renaming arch_reg 65 to phy_reg 121, isMove: 0
+in-flight renaming arch_reg 66 to phy_reg 116, isMove: 0
+in-flight renaming arch_reg 94 to phy_reg 117, isMove: 0
+in-flight renaming arch_reg 0 to phy_reg 118, isMove: 0
+in-flight renaming arch_reg 70 to phy_reg 119, isMove: 0
+in-flight renaming arch_reg 68 to phy_reg 126, isMove: 0
+in-flight renaming arch_reg 69 to phy_reg 127, isMove: 0
+in-flight renaming arch_reg 5 to phy_reg 122, isMove: 0
+instret:192  PC:0x1ffff0000000000000000000080000324  instr:0x00e00093   iType:Alu    [doCommitNormalInst [0]]       2385
+instret:193  PC:0x1ffff0000000000000000000080000328  instr:0x00b00113   iType:Alu    [doCommitNormalInst [1]]       2385
+Committing phy_reg: 121, to arch_reg: 1
+Freeing phy_reg: 105
+Committing phy_reg: 116, to arch_reg: 2
+Freeing phy_reg: 114
+instret:194  PC:0x1ffff000000000000000000008000032c  instr:0x00208f33   iType:Alu    [doCommitNormalInst [0]]       2386
+instret:195  PC:0x1ffff0000000000000000000080000330  instr:0x00000013   iType:Alu    [doCommitNormalInst [1]]       2386
+Committing phy_reg: 117, to arch_reg: 30
+Freeing phy_reg: 108
+Freeing phy_reg: 118
+instret:196  PC:0x1ffff0000000000000000000080000334  instr:0x000f0313   iType:Alu    [doCommitNormalInst [0]]       2387
+instret:197  PC:0x1ffff0000000000000000000080000338  instr:0x00120213   iType:Alu    [doCommitNormalInst [1]]       2387
+Committing phy_reg: 119, to arch_reg: 6
+Freeing phy_reg: 110
+Committing phy_reg: 126, to arch_reg: 4
+Freeing phy_reg: 112
+in-flight renaming arch_reg 93 to phy_reg 123, isMove: 0
+in-flight renaming arch_reg 67 to phy_reg 124, isMove: 0
+instret:198  PC:0x1ffff000000000000000000008000033c  instr:0x00200293   iType:Alu    [doCommitNormalInst [0]]       2388
+Committing phy_reg: 127, to arch_reg: 5
+Freeing phy_reg: 113
+in-flight renaming arch_reg 12 to phy_reg 125, isMove: 0
+in-flight renaming arch_reg 68 to phy_reg 72, isMove: 0
+instret:199  PC:0x1ffff0000000000000000000080000340  instr:0xfe5212e3   iType:Br    [doCommitNormalInst [0]]       2389
+Freeing phy_reg: 122
+in-flight renaming arch_reg 65 to phy_reg 69, isMove: 0
+in-flight renaming arch_reg 66 to phy_reg 5, isMove: 0
+in-flight renaming arch_reg 94 to phy_reg 68, isMove: 0
+in-flight renaming arch_reg 0 to phy_reg 11, isMove: 0
+in-flight renaming arch_reg 0 to phy_reg 10, isMove: 0
+in-flight renaming arch_reg 70 to phy_reg 71, isMove: 0
+instret:200  PC:0x1ffff0000000000000000000080000344  instr:0x01900e93   iType:Alu    [doCommitNormalInst [0]]       2392
+instret:201  PC:0x1ffff0000000000000000000080000348  instr:0x01500193   iType:Alu    [doCommitNormalInst [1]]       2392
+Committing phy_reg: 123, to arch_reg: 29
+Freeing phy_reg: 29
+Committing phy_reg: 124, to arch_reg: 3
+Freeing phy_reg: 88
+in-flight renaming arch_reg 68 to phy_reg 64, isMove: 0
+in-flight renaming arch_reg 69 to phy_reg 75, isMove: 0
+instret:202  PC:0x1ffff000000000000000000008000034c  instr:0x2bd31663   iType:Br    [doCommitNormalInst [0]]       2393
+instret:203  PC:0x1ffff0000000000000000000080000350  instr:0x00000213   iType:Alu    [doCommitNormalInst [1]]       2393
+Freeing phy_reg: 125
+Committing phy_reg: 72, to arch_reg: 4
+Freeing phy_reg: 126
+in-flight renaming arch_reg 1 to phy_reg 74, isMove: 0
+in-flight renaming arch_reg 93 to phy_reg 76, isMove: 0
+instret:204  PC:0x1ffff0000000000000000000080000354  instr:0x00f00093   iType:Alu    [doCommitNormalInst [0]]       2394
+instret:205  PC:0x1ffff0000000000000000000080000358  instr:0x00b00113   iType:Alu    [doCommitNormalInst [1]]       2394
+Committing phy_reg: 69, to arch_reg: 1
+Freeing phy_reg: 121
+Committing phy_reg: 5, to arch_reg: 2
+Freeing phy_reg: 116
+in-flight renaming arch_reg 67 to phy_reg 81, isMove: 0
+instret:206  PC:0x1ffff000000000000000000008000035c  instr:0x00208f33   iType:Alu    [doCommitNormalInst [0]]       2395
+instret:207  PC:0x1ffff0000000000000000000080000360  instr:0x00000013   iType:Alu    [doCommitNormalInst [1]]       2395
+Committing phy_reg: 68, to arch_reg: 30
+Freeing phy_reg: 117
+Freeing phy_reg: 11
+instret:208  PC:0x1ffff0000000000000000000080000364  instr:0x00000013   iType:Alu    [doCommitNormalInst [0]]       2396
+instret:209  PC:0x1ffff0000000000000000000080000368  instr:0x000f0313   iType:Alu    [doCommitNormalInst [1]]       2396
+Freeing phy_reg: 10
+Committing phy_reg: 71, to arch_reg: 6
+Freeing phy_reg: 119
+instret:210  PC:0x1ffff000000000000000000008000036c  instr:0x00120213   iType:Alu    [doCommitNormalInst [0]]       2397
+instret:211  PC:0x1ffff0000000000000000000080000370  instr:0x00200293   iType:Alu    [doCommitNormalInst [1]]       2397
+Committing phy_reg: 64, to arch_reg: 4
+Freeing phy_reg: 72
+Committing phy_reg: 75, to arch_reg: 5
+Freeing phy_reg: 127
+instret:212  PC:0x1ffff0000000000000000000080000374  instr:0xfe5210e3   iType:Br    [doCommitNormalInst [0]]       2399
+Freeing phy_reg: 74
+in-flight renaming arch_reg 65 to phy_reg 76, isMove: 0
+in-flight renaming arch_reg 66 to phy_reg 81, isMove: 0
+in-flight renaming arch_reg 94 to phy_reg 77, isMove: 0
+in-flight renaming arch_reg 0 to phy_reg 67, isMove: 0
+in-flight renaming arch_reg 0 to phy_reg 79, isMove: 0
+in-flight renaming arch_reg 70 to phy_reg 85, isMove: 0
+in-flight renaming arch_reg 68 to phy_reg 73, isMove: 0
+in-flight renaming arch_reg 69 to phy_reg 82, isMove: 0
+in-flight renaming arch_reg 1 to phy_reg 78, isMove: 0
+instret:213  PC:0x1ffff0000000000000000000080000354  instr:0x00f00093   iType:Alu    [doCommitNormalInst [0]]       2453
+instret:214  PC:0x1ffff0000000000000000000080000358  instr:0x00b00113   iType:Alu    [doCommitNormalInst [1]]       2453
+Committing phy_reg: 76, to arch_reg: 1
+Freeing phy_reg: 69
+Committing phy_reg: 81, to arch_reg: 2
+Freeing phy_reg: 5
+instret:215  PC:0x1ffff000000000000000000008000035c  instr:0x00208f33   iType:Alu    [doCommitNormalInst [0]]       2454
+instret:216  PC:0x1ffff0000000000000000000080000360  instr:0x00000013   iType:Alu    [doCommitNormalInst [1]]       2454
+Committing phy_reg: 77, to arch_reg: 30
+Freeing phy_reg: 68
+Freeing phy_reg: 67
+instret:217  PC:0x1ffff0000000000000000000080000364  instr:0x00000013   iType:Alu    [doCommitNormalInst [0]]       2455
+instret:218  PC:0x1ffff0000000000000000000080000368  instr:0x000f0313   iType:Alu    [doCommitNormalInst [1]]       2455
+Freeing phy_reg: 79
+Committing phy_reg: 85, to arch_reg: 6
+Freeing phy_reg: 71
+in-flight renaming arch_reg 93 to phy_reg 86, isMove: 0
+in-flight renaming arch_reg 67 to phy_reg 87, isMove: 0
+instret:219  PC:0x1ffff000000000000000000008000036c  instr:0x00120213   iType:Alu    [doCommitNormalInst [0]]       2456
+instret:220  PC:0x1ffff0000000000000000000080000370  instr:0x00200293   iType:Alu    [doCommitNormalInst [1]]       2456
+Committing phy_reg: 73, to arch_reg: 4
+Freeing phy_reg: 64
+Committing phy_reg: 82, to arch_reg: 5
+Freeing phy_reg: 75
+in-flight renaming arch_reg 24 to phy_reg 80, isMove: 0
+in-flight renaming arch_reg 68 to phy_reg 94, isMove: 0
+instret:221  PC:0x1ffff0000000000000000000080000374  instr:0xfe5210e3   iType:Br    [doCommitNormalInst [0]]       2457
+Freeing phy_reg: 78
+in-flight renaming arch_reg 65 to phy_reg 84, isMove: 0
+in-flight renaming arch_reg 66 to phy_reg 92, isMove: 0
+in-flight renaming arch_reg 94 to phy_reg 91, isMove: 0
+in-flight renaming arch_reg 68 to phy_reg 4, isMove: 0
+in-flight renaming arch_reg 69 to phy_reg 3, isMove: 0
+in-flight renaming arch_reg 13 to phy_reg 89, isMove: 0
+instret:222  PC:0x1ffff0000000000000000000080000378  instr:0x01a00e93   iType:Alu    [doCommitNormalInst [0]]       2460
+instret:223  PC:0x1ffff000000000000000000008000037c  instr:0x01600193   iType:Alu    [doCommitNormalInst [1]]       2460
+Committing phy_reg: 86, to arch_reg: 29
+Freeing phy_reg: 123
+Committing phy_reg: 87, to arch_reg: 3
+Freeing phy_reg: 124
+in-flight renaming arch_reg 93 to phy_reg 66, isMove: 0
+in-flight renaming arch_reg 67 to phy_reg 6, isMove: 0
+instret:224  PC:0x1ffff0000000000000000000080000380  instr:0x27d31c63   iType:Br    [doCommitNormalInst [0]]       2461
+instret:225  PC:0x1ffff0000000000000000000080000384  instr:0x00000213   iType:Alu    [doCommitNormalInst [1]]       2461
+Freeing phy_reg: 80
+Committing phy_reg: 94, to arch_reg: 4
+Freeing phy_reg: 73
+in-flight renaming arch_reg 16 to phy_reg 96, isMove: 0
+in-flight renaming arch_reg 68 to phy_reg 100, isMove: 0
+instret:226  PC:0x1ffff0000000000000000000080000388  instr:0x00d00093   iType:Alu    [doCommitNormalInst [0]]       2462
+instret:227  PC:0x1ffff000000000000000000008000038c  instr:0x00b00113   iType:Alu    [doCommitNormalInst [1]]       2462
+Committing phy_reg: 84, to arch_reg: 1
+Freeing phy_reg: 76
+Committing phy_reg: 92, to arch_reg: 2
+Freeing phy_reg: 81
+in-flight renaming arch_reg 65 to phy_reg 30, isMove: 0
+in-flight renaming arch_reg 66 to phy_reg 99, isMove: 0
+instret:228  PC:0x1ffff0000000000000000000080000390  instr:0x00208f33   iType:Alu    [doCommitNormalInst [0]]       2463
+instret:229  PC:0x1ffff0000000000000000000080000394  instr:0x00120213   iType:Alu    [doCommitNormalInst [1]]       2463
+Committing phy_reg: 91, to arch_reg: 30
+Freeing phy_reg: 77
+Committing phy_reg: 4, to arch_reg: 4
+Freeing phy_reg: 94
+in-flight renaming arch_reg 0 to phy_reg 101, isMove: 0
+in-flight renaming arch_reg 94 to phy_reg 70, isMove: 0
+instret:230  PC:0x1ffff0000000000000000000080000398  instr:0x00200293   iType:Alu    [doCommitNormalInst [0]]       2464
+Committing phy_reg: 3, to arch_reg: 5
+Freeing phy_reg: 82
+instret:231  PC:0x1ffff000000000000000000008000039c  instr:0xfe5216e3   iType:Br    [doCommitNormalInst [0]]       2466
+Freeing phy_reg: 89
+in-flight renaming arch_reg 65 to phy_reg 66, isMove: 0
+in-flight renaming arch_reg 66 to phy_reg 6, isMove: 0
+in-flight renaming arch_reg 94 to phy_reg 96, isMove: 0
+in-flight renaming arch_reg 68 to phy_reg 100, isMove: 0
+in-flight renaming arch_reg 69 to phy_reg 30, isMove: 0
+in-flight renaming arch_reg 13 to phy_reg 99, isMove: 0
+instret:232  PC:0x1ffff0000000000000000000080000388  instr:0x00d00093   iType:Alu    [doCommitNormalInst [0]]       2522
+instret:233  PC:0x1ffff000000000000000000008000038c  instr:0x00b00113   iType:Alu    [doCommitNormalInst [1]]       2522
+Committing phy_reg: 66, to arch_reg: 1
+Freeing phy_reg: 84
+Committing phy_reg: 6, to arch_reg: 2
+Freeing phy_reg: 92
+in-flight renaming arch_reg 93 to phy_reg 101, isMove: 0
+in-flight renaming arch_reg 67 to phy_reg 70, isMove: 0
+instret:234  PC:0x1ffff0000000000000000000080000390  instr:0x00208f33   iType:Alu    [doCommitNormalInst [0]]       2523
+instret:235  PC:0x1ffff0000000000000000000080000394  instr:0x00120213   iType:Alu    [doCommitNormalInst [1]]       2523
+Committing phy_reg: 96, to arch_reg: 30
+Freeing phy_reg: 91
+Committing phy_reg: 100, to arch_reg: 4
+Freeing phy_reg: 4
+in-flight renaming arch_reg 16 to phy_reg 1, isMove: 0
+in-flight renaming arch_reg 68 to phy_reg 90, isMove: 0
+instret:236  PC:0x1ffff0000000000000000000080000398  instr:0x00200293   iType:Alu    [doCommitNormalInst [0]]       2524
+Committing phy_reg: 30, to arch_reg: 5
+Freeing phy_reg: 3
+in-flight renaming arch_reg 65 to phy_reg 97, isMove: 0
+in-flight renaming arch_reg 66 to phy_reg 107, isMove: 0
+instret:237  PC:0x1ffff000000000000000000008000039c  instr:0xfe5216e3   iType:Br    [doCommitNormalInst [0]]       2525
+Freeing phy_reg: 99
+in-flight renaming arch_reg 0 to phy_reg 95, isMove: 0
+in-flight renaming arch_reg 94 to phy_reg 83, isMove: 0
+in-flight renaming arch_reg 68 to phy_reg 104, isMove: 0
+in-flight renaming arch_reg 69 to phy_reg 106, isMove: 0
+instret:238  PC:0x1ffff00000000000000000000800003a0  instr:0x01800e93   iType:Alu    [doCommitNormalInst [0]]       2527
+instret:239  PC:0x1ffff00000000000000000000800003a4  instr:0x01700193   iType:Alu    [doCommitNormalInst [1]]       2527
+Committing phy_reg: 101, to arch_reg: 29
+Freeing phy_reg: 86
+Committing phy_reg: 70, to arch_reg: 3
+Freeing phy_reg: 87
+in-flight renaming arch_reg 9 to phy_reg 98, isMove: 0
+in-flight renaming arch_reg 93 to phy_reg 93, isMove: 0
+instret:240  PC:0x1ffff00000000000000000000800003a8  instr:0x25df1863   iType:Br    [doCommitNormalInst [0]]       2528
+instret:241  PC:0x1ffff00000000000000000000800003ac  instr:0x00000213   iType:Alu    [doCommitNormalInst [1]]       2528
+Freeing phy_reg: 1
+Committing phy_reg: 90, to arch_reg: 4
+Freeing phy_reg: 100
+in-flight renaming arch_reg 67 to phy_reg 109, isMove: 0
+in-flight renaming arch_reg 4 to phy_reg 115, isMove: 0
+instret:242  PC:0x1ffff00000000000000000000800003b0  instr:0x00e00093   iType:Alu    [doCommitNormalInst [0]]       2529
+instret:243  PC:0x1ffff00000000000000000000800003b4  instr:0x00b00113   iType:Alu    [doCommitNormalInst [1]]       2529
+Committing phy_reg: 97, to arch_reg: 1
+Freeing phy_reg: 66
+Committing phy_reg: 107, to arch_reg: 2
+Freeing phy_reg: 6
+in-flight renaming arch_reg 68 to phy_reg 103, isMove: 0
+in-flight renaming arch_reg 65 to phy_reg 111, isMove: 0
+instret:244  PC:0x1ffff00000000000000000000800003b8  instr:0x00000013   iType:Alu    [doCommitNormalInst [0]]       2530
+instret:245  PC:0x1ffff00000000000000000000800003bc  instr:0x00208f33   iType:Alu    [doCommitNormalInst [1]]       2530
+Freeing phy_reg: 95
+Committing phy_reg: 83, to arch_reg: 30
+Freeing phy_reg: 96
+in-flight renaming arch_reg 66 to phy_reg 2, isMove: 0
+in-flight renaming arch_reg 0 to phy_reg 120, isMove: 0
+instret:246  PC:0x1ffff00000000000000000000800003c0  instr:0x00120213   iType:Alu    [doCommitNormalInst [0]]       2531
+instret:247  PC:0x1ffff00000000000000000000800003c4  instr:0x00200293   iType:Alu    [doCommitNormalInst [1]]       2531
+Committing phy_reg: 104, to arch_reg: 4
+Freeing phy_reg: 90
+Committing phy_reg: 106, to arch_reg: 5
+Freeing phy_reg: 30
+wrongSpec - freeing phy reg 116 (slot 0)
+wrongSpec - freeing phy reg 117 (slot 1)
+instret:248  PC:0x1ffff00000000000000000000800003c8  instr:0xfe5214e3   iType:Br    [doCommitNormalInst [0]]       2533
+Freeing phy_reg: 98
+in-flight renaming arch_reg 65 to phy_reg 93, isMove: 0
+in-flight renaming arch_reg 66 to phy_reg 109, isMove: 0
+in-flight renaming arch_reg 0 to phy_reg 115, isMove: 0
+in-flight renaming arch_reg 94 to phy_reg 103, isMove: 0
+in-flight renaming arch_reg 68 to phy_reg 111, isMove: 0
+in-flight renaming arch_reg 69 to phy_reg 2, isMove: 0
+in-flight renaming arch_reg 9 to phy_reg 120, isMove: 0
+instret:249  PC:0x1ffff00000000000000000000800003b0  instr:0x00e00093   iType:Alu    [doCommitNormalInst [0]]       2670
+instret:250  PC:0x1ffff00000000000000000000800003b4  instr:0x00b00113   iType:Alu    [doCommitNormalInst [1]]       2670
+Committing phy_reg: 93, to arch_reg: 1
+Freeing phy_reg: 97
+Committing phy_reg: 109, to arch_reg: 2
+Freeing phy_reg: 107
+instret:251  PC:0x1ffff00000000000000000000800003b8  instr:0x00000013   iType:Alu    [doCommitNormalInst [0]]       2671
+instret:252  PC:0x1ffff00000000000000000000800003bc  instr:0x00208f33   iType:Alu    [doCommitNormalInst [1]]       2671
+Freeing phy_reg: 115
+Committing phy_reg: 103, to arch_reg: 30
+Freeing phy_reg: 83
+in-flight renaming arch_reg 93 to phy_reg 105, isMove: 0
+in-flight renaming arch_reg 67 to phy_reg 114, isMove: 0
+instret:253  PC:0x1ffff00000000000000000000800003c0  instr:0x00120213   iType:Alu    [doCommitNormalInst [0]]       2672
+instret:254  PC:0x1ffff00000000000000000000800003c4  instr:0x00200293   iType:Alu    [doCommitNormalInst [1]]       2672
+Committing phy_reg: 111, to arch_reg: 4
+Freeing phy_reg: 104
+Committing phy_reg: 2, to arch_reg: 5
+Freeing phy_reg: 106
+in-flight renaming arch_reg 4 to phy_reg 108, isMove: 0
+in-flight renaming arch_reg 68 to phy_reg 118, isMove: 0
+instret:255  PC:0x1ffff00000000000000000000800003c8  instr:0xfe5214e3   iType:Br    [doCommitNormalInst [0]]       2673
+Freeing phy_reg: 120
+in-flight renaming arch_reg 65 to phy_reg 110, isMove: 0
+in-flight renaming arch_reg 66 to phy_reg 112, isMove: 0
+in-flight renaming arch_reg 0 to phy_reg 113, isMove: 0
+in-flight renaming arch_reg 0 to phy_reg 122, isMove: 0
+in-flight renaming arch_reg 94 to phy_reg 29, isMove: 0
+in-flight renaming arch_reg 68 to phy_reg 88, isMove: 0
+instret:256  PC:0x1ffff00000000000000000000800003cc  instr:0x01900e93   iType:Alu    [doCommitNormalInst [0]]       2676
+instret:257  PC:0x1ffff00000000000000000000800003d0  instr:0x01800193   iType:Alu    [doCommitNormalInst [1]]       2676
+Committing phy_reg: 105, to arch_reg: 29
+Freeing phy_reg: 101
+Committing phy_reg: 114, to arch_reg: 3
+Freeing phy_reg: 70
+in-flight renaming arch_reg 69 to phy_reg 125, isMove: 0
+in-flight renaming arch_reg 5 to phy_reg 126, isMove: 0
+instret:258  PC:0x1ffff00000000000000000000800003d4  instr:0x23df1263   iType:Br    [doCommitNormalInst [0]]       2677
+instret:259  PC:0x1ffff00000000000000000000800003d8  instr:0x00000213   iType:Alu    [doCommitNormalInst [1]]       2677
+Freeing phy_reg: 108
+Committing phy_reg: 118, to arch_reg: 4
+Freeing phy_reg: 111
+in-flight renaming arch_reg 93 to phy_reg 121, isMove: 0
+instret:260  PC:0x1ffff00000000000000000000800003dc  instr:0x00f00093   iType:Alu    [doCommitNormalInst [0]]       2678
+instret:261  PC:0x1ffff00000000000000000000800003e0  instr:0x00b00113   iType:Alu    [doCommitNormalInst [1]]       2678
+Committing phy_reg: 110, to arch_reg: 1
+Freeing phy_reg: 93
+Committing phy_reg: 112, to arch_reg: 2
+Freeing phy_reg: 109
+in-flight renaming arch_reg 67 to phy_reg 116, isMove: 0
+in-flight renaming arch_reg 20 to phy_reg 117, isMove: 0
+instret:262  PC:0x1ffff00000000000000000000800003e4  instr:0x00000013   iType:Alu    [doCommitNormalInst [0]]       2679
+instret:263  PC:0x1ffff00000000000000000000800003e8  instr:0x00000013   iType:Alu    [doCommitNormalInst [1]]       2679
+Freeing phy_reg: 113
+Freeing phy_reg: 122
+in-flight renaming arch_reg 68 to phy_reg 11, isMove: 0
+in-flight renaming arch_reg 65 to phy_reg 10, isMove: 0
+instret:264  PC:0x1ffff00000000000000000000800003ec  instr:0x00208f33   iType:Alu    [doCommitNormalInst [0]]       2680
+instret:265  PC:0x1ffff00000000000000000000800003f0  instr:0x00120213   iType:Alu    [doCommitNormalInst [1]]       2680
+Committing phy_reg: 29, to arch_reg: 30
+Freeing phy_reg: 103
+Committing phy_reg: 88, to arch_reg: 4
+Freeing phy_reg: 118
+in-flight renaming arch_reg 0 to phy_reg 119, isMove: 0
+in-flight renaming arch_reg 66 to phy_reg 72, isMove: 0
+instret:266  PC:0x1ffff00000000000000000000800003f4  instr:0x00200293   iType:Alu    [doCommitNormalInst [0]]       2681
+Committing phy_reg: 125, to arch_reg: 5
+Freeing phy_reg: 2
+wrongSpec - freeing phy reg 11 (slot 14)
+wrongSpec - freeing phy reg 10 (slot 15)
+wrongSpec - freeing phy reg 119 (slot 16)
+wrongSpec - freeing phy reg 72 (slot 17)
+wrongSpec - freeing phy reg 75 (slot 18)
+wrongSpec - freeing phy reg 74 (slot 19)
+wrongSpec - freeing phy reg 76 (slot 20)
+instret:267  PC:0x1ffff00000000000000000000800003f8  instr:0xfe5212e3   iType:Br    [doCommitNormalInst [0]]       2683
+Freeing phy_reg: 126
+in-flight renaming arch_reg 65 to phy_reg 121, isMove: 0
+in-flight renaming arch_reg 66 to phy_reg 116, isMove: 0
+in-flight renaming arch_reg 0 to phy_reg 117, isMove: 0
+in-flight renaming arch_reg 0 to phy_reg 11, isMove: 0
+in-flight renaming arch_reg 94 to phy_reg 10, isMove: 0
+in-flight renaming arch_reg 68 to phy_reg 119, isMove: 0
+in-flight renaming arch_reg 69 to phy_reg 72, isMove: 0
+in-flight renaming arch_reg 5 to phy_reg 127, isMove: 0
+instret:268  PC:0x1ffff00000000000000000000800003dc  instr:0x00f00093   iType:Alu    [doCommitNormalInst [0]]       2691
+instret:269  PC:0x1ffff00000000000000000000800003e0  instr:0x00b00113   iType:Alu    [doCommitNormalInst [1]]       2691
+Committing phy_reg: 121, to arch_reg: 1
+Freeing phy_reg: 110
+Committing phy_reg: 116, to arch_reg: 2
+Freeing phy_reg: 112
+instret:270  PC:0x1ffff00000000000000000000800003e4  instr:0x00000013   iType:Alu    [doCommitNormalInst [0]]       2692
+instret:271  PC:0x1ffff00000000000000000000800003e8  instr:0x00000013   iType:Alu    [doCommitNormalInst [1]]       2692
+Freeing phy_reg: 117
+Freeing phy_reg: 11
+in-flight renaming arch_reg 93 to phy_reg 74, isMove: 0
+instret:272  PC:0x1ffff00000000000000000000800003ec  instr:0x00208f33   iType:Alu    [doCommitNormalInst [0]]       2693
+instret:273  PC:0x1ffff00000000000000000000800003f0  instr:0x00120213   iType:Alu    [doCommitNormalInst [1]]       2693
+Committing phy_reg: 10, to arch_reg: 30
+Freeing phy_reg: 29
+Committing phy_reg: 119, to arch_reg: 4
+Freeing phy_reg: 88
+in-flight renaming arch_reg 67 to phy_reg 69, isMove: 0
+in-flight renaming arch_reg 20 to phy_reg 5, isMove: 0
+instret:274  PC:0x1ffff00000000000000000000800003f4  instr:0x00200293   iType:Alu    [doCommitNormalInst [0]]       2694
+Committing phy_reg: 72, to arch_reg: 5
+Freeing phy_reg: 125
+in-flight renaming arch_reg 68 to phy_reg 68, isMove: 0
+in-flight renaming arch_reg 65 to phy_reg 67, isMove: 0
+instret:275  PC:0x1ffff00000000000000000000800003f8  instr:0xfe5212e3   iType:Br    [doCommitNormalInst [0]]       2695
+Freeing phy_reg: 127
+in-flight renaming arch_reg 0 to phy_reg 79, isMove: 0
+in-flight renaming arch_reg 66 to phy_reg 71, isMove: 0
+in-flight renaming arch_reg 94 to phy_reg 64, isMove: 0
+in-flight renaming arch_reg 68 to phy_reg 75, isMove: 0
+instret:276  PC:0x1ffff00000000000000000000800003fc  instr:0x01a00e93   iType:Alu    [doCommitNormalInst [0]]       2697
+Committing phy_reg: 74, to arch_reg: 29
+Freeing phy_reg: 105
+in-flight renaming arch_reg 69 to phy_reg 78, isMove: 0
+in-flight renaming arch_reg 9 to phy_reg 123, isMove: 0
+instret:277  PC:0x1ffff0000000000000000000080000400  instr:0x01900193   iType:Alu    [doCommitNormalInst [0]]       2698
+instret:278  PC:0x1ffff0000000000000000000080000404  instr:0x1fdf1a63   iType:Br    [doCommitNormalInst [1]]       2698
+Committing phy_reg: 69, to arch_reg: 3
+Freeing phy_reg: 114
+Freeing phy_reg: 5
+instret:279  PC:0x1ffff0000000000000000000080000408  instr:0x00000213   iType:Alu    [doCommitNormalInst [0]]       2699
+instret:280  PC:0x1ffff000000000000000000008000040c  instr:0x00d00093   iType:Alu    [doCommitNormalInst [1]]       2699
+Committing phy_reg: 68, to arch_reg: 4
+Freeing phy_reg: 119
+Committing phy_reg: 67, to arch_reg: 1
+Freeing phy_reg: 121
+instret:281  PC:0x1ffff0000000000000000000080000410  instr:0x00000013   iType:Alu    [doCommitNormalInst [0]]       2700
+instret:282  PC:0x1ffff0000000000000000000080000414  instr:0x00b00113   iType:Alu    [doCommitNormalInst [1]]       2700
+Freeing phy_reg: 79
+Committing phy_reg: 71, to arch_reg: 2
+Freeing phy_reg: 116
+in-flight renaming arch_reg 65 to phy_reg 124, isMove: 0
+in-flight renaming arch_reg 0 to phy_reg 80, isMove: 0
+instret:283  PC:0x1ffff0000000000000000000080000418  instr:0x00208f33   iType:Alu    [doCommitNormalInst [0]]       2701
+instret:284  PC:0x1ffff000000000000000000008000041c  instr:0x00120213   iType:Alu    [doCommitNormalInst [1]]       2701
+Committing phy_reg: 64, to arch_reg: 30
+Freeing phy_reg: 10
+Committing phy_reg: 75, to arch_reg: 4
+Freeing phy_reg: 68
+in-flight renaming arch_reg 66 to phy_reg 73, isMove: 0
+in-flight renaming arch_reg 94 to phy_reg 76, isMove: 0
+instret:285  PC:0x1ffff0000000000000000000080000420  instr:0x00200293   iType:Alu    [doCommitNormalInst [0]]       2702
+Committing phy_reg: 78, to arch_reg: 5
+Freeing phy_reg: 72
+in-flight renaming arch_reg 68 to phy_reg 81, isMove: 0
+in-flight renaming arch_reg 69 to phy_reg 77, isMove: 0
+instret:286  PC:0x1ffff0000000000000000000080000424  instr:0xfe5214e3   iType:Br    [doCommitNormalInst [0]]       2703
+Freeing phy_reg: 123
+in-flight renaming arch_reg 9 to phy_reg 94, isMove: 0
+instret:287  PC:0x1ffff000000000000000000008000040c  instr:0x00d00093   iType:Alu    [doCommitNormalInst [0]]       2705
+instret:288  PC:0x1ffff0000000000000000000080000410  instr:0x00000013   iType:Alu    [doCommitNormalInst [1]]       2705
+Committing phy_reg: 124, to arch_reg: 1
+Freeing phy_reg: 67
+Freeing phy_reg: 80
+instret:289  PC:0x1ffff0000000000000000000080000414  instr:0x00b00113   iType:Alu    [doCommitNormalInst [0]]       2706
+Committing phy_reg: 73, to arch_reg: 2
+Freeing phy_reg: 71
+in-flight renaming arch_reg 93 to phy_reg 82, isMove: 0
+in-flight renaming arch_reg 67 to phy_reg 89, isMove: 0
+instret:290  PC:0x1ffff0000000000000000000080000418  instr:0x00208f33   iType:Alu    [doCommitNormalInst [0]]       2707
+instret:291  PC:0x1ffff000000000000000000008000041c  instr:0x00120213   iType:Alu    [doCommitNormalInst [1]]       2707
+Committing phy_reg: 76, to arch_reg: 30
+Freeing phy_reg: 64
+Committing phy_reg: 81, to arch_reg: 4
+Freeing phy_reg: 75
+in-flight renaming arch_reg 8 to phy_reg 84, isMove: 0
+in-flight renaming arch_reg 68 to phy_reg 92, isMove: 0
+instret:292  PC:0x1ffff0000000000000000000080000420  instr:0x00200293   iType:Alu    [doCommitNormalInst [0]]       2708
+Committing phy_reg: 77, to arch_reg: 5
+Freeing phy_reg: 78
+in-flight renaming arch_reg 65 to phy_reg 91, isMove: 0
+in-flight renaming arch_reg 0 to phy_reg 4, isMove: 0
+instret:293  PC:0x1ffff0000000000000000000080000424  instr:0xfe5214e3   iType:Br    [doCommitNormalInst [0]]       2709
+Freeing phy_reg: 94
+instret:294  PC:0x1ffff0000000000000000000080000428  instr:0x01800e93   iType:Alu    [doCommitNormalInst [0]]       2711
+instret:295  PC:0x1ffff000000000000000000008000042c  instr:0x01a00193   iType:Alu    [doCommitNormalInst [1]]       2711
+Committing phy_reg: 82, to arch_reg: 29
+Freeing phy_reg: 74
+Committing phy_reg: 89, to arch_reg: 3
+Freeing phy_reg: 69
+instret:296  PC:0x1ffff0000000000000000000080000430  instr:0x1ddf1463   iType:Br    [doCommitNormalInst [0]]       2712
+instret:297  PC:0x1ffff0000000000000000000080000434  instr:0x00000213   iType:Alu    [doCommitNormalInst [1]]       2712
+Freeing phy_reg: 84
+Committing phy_reg: 92, to arch_reg: 4
+Freeing phy_reg: 81
+instret:298  PC:0x1ffff0000000000000000000080000438  instr:0x00e00093   iType:Alu    [doCommitNormalInst [0]]       2713
+instret:299  PC:0x1ffff000000000000000000008000043c  instr:0x00000013   iType:Alu    [doCommitNormalInst [1]]       2713
+Committing phy_reg: 91, to arch_reg: 1
+Freeing phy_reg: 124
+Freeing phy_reg: 4
+in-flight renaming arch_reg 66 to phy_reg 3, isMove: 0
+in-flight renaming arch_reg 0 to phy_reg 99, isMove: 0
+in-flight renaming arch_reg 94 to phy_reg 86, isMove: 0
+in-flight renaming arch_reg 68 to phy_reg 87, isMove: 0
+in-flight renaming arch_reg 69 to phy_reg 1, isMove: 0
+in-flight renaming arch_reg 5 to phy_reg 100, isMove: 0
+instret:300  PC:0x1ffff0000000000000000000080000440  instr:0x00b00113   iType:Alu    [doCommitNormalInst [0]]       2765
+instret:301  PC:0x1ffff0000000000000000000080000444  instr:0x00000013   iType:Alu    [doCommitNormalInst [1]]       2765
+Committing phy_reg: 3, to arch_reg: 2
+Freeing phy_reg: 73
+Freeing phy_reg: 99
+in-flight renaming arch_reg 65 to phy_reg 66, isMove: 0
+in-flight renaming arch_reg 0 to phy_reg 6, isMove: 0
+instret:302  PC:0x1ffff0000000000000000000080000448  instr:0x00208f33   iType:Alu    [doCommitNormalInst [0]]       2766
+instret:303  PC:0x1ffff000000000000000000008000044c  instr:0x00120213   iType:Alu    [doCommitNormalInst [1]]       2766
+Committing phy_reg: 86, to arch_reg: 30
+Freeing phy_reg: 76
+Committing phy_reg: 87, to arch_reg: 4
+Freeing phy_reg: 92
+in-flight renaming arch_reg 66 to phy_reg 95, isMove: 0
+in-flight renaming arch_reg 0 to phy_reg 96, isMove: 0
+instret:304  PC:0x1ffff0000000000000000000080000450  instr:0x00200293   iType:Alu    [doCommitNormalInst [0]]       2767
+Committing phy_reg: 1, to arch_reg: 5
+Freeing phy_reg: 77
+in-flight renaming arch_reg 94 to phy_reg 90, isMove: 0
+in-flight renaming arch_reg 68 to phy_reg 30, isMove: 0
+instret:305  PC:0x1ffff0000000000000000000080000454  instr:0xfe5212e3   iType:Br    [doCommitNormalInst [0]]       2768
+Freeing phy_reg: 100
+in-flight renaming arch_reg 69 to phy_reg 98, isMove: 0
+in-flight renaming arch_reg 5 to phy_reg 97, isMove: 0
+instret:306  PC:0x1ffff0000000000000000000080000438  instr:0x00e00093   iType:Alu    [doCommitNormalInst [0]]       2770
+instret:307  PC:0x1ffff000000000000000000008000043c  instr:0x00000013   iType:Alu    [doCommitNormalInst [1]]       2770
+Committing phy_reg: 66, to arch_reg: 1
+Freeing phy_reg: 91
+Freeing phy_reg: 6
+instret:308  PC:0x1ffff0000000000000000000080000440  instr:0x00b00113   iType:Alu    [doCommitNormalInst [0]]       2771
+instret:309  PC:0x1ffff0000000000000000000080000444  instr:0x00000013   iType:Alu    [doCommitNormalInst [1]]       2771
+Committing phy_reg: 95, to arch_reg: 2
+Freeing phy_reg: 3
+Freeing phy_reg: 96
+in-flight renaming arch_reg 93 to phy_reg 107, isMove: 0
+in-flight renaming arch_reg 67 to phy_reg 115, isMove: 0
+instret:310  PC:0x1ffff0000000000000000000080000448  instr:0x00208f33   iType:Alu    [doCommitNormalInst [0]]       2772
+instret:311  PC:0x1ffff000000000000000000008000044c  instr:0x00120213   iType:Alu    [doCommitNormalInst [1]]       2772
+Committing phy_reg: 90, to arch_reg: 30
+Freeing phy_reg: 86
+Committing phy_reg: 30, to arch_reg: 4
+Freeing phy_reg: 87
+in-flight renaming arch_reg 24 to phy_reg 83, isMove: 0
+in-flight renaming arch_reg 68 to phy_reg 104, isMove: 0
+instret:312  PC:0x1ffff0000000000000000000080000450  instr:0x00200293   iType:Alu    [doCommitNormalInst [0]]       2773
+Committing phy_reg: 98, to arch_reg: 5
+Freeing phy_reg: 1
+in-flight renaming arch_reg 65 to phy_reg 106, isMove: 0
+in-flight renaming arch_reg 0 to phy_reg 120, isMove: 0
+instret:313  PC:0x1ffff0000000000000000000080000454  instr:0xfe5212e3   iType:Br    [doCommitNormalInst [0]]       2774
+Freeing phy_reg: 97
+in-flight renaming arch_reg 0 to phy_reg 101, isMove: 0
+in-flight renaming arch_reg 66 to phy_reg 70, isMove: 0
+in-flight renaming arch_reg 94 to phy_reg 108, isMove: 0
+in-flight renaming arch_reg 68 to phy_reg 111, isMove: 0
+instret:314  PC:0x1ffff0000000000000000000080000458  instr:0x01900e93   iType:Alu    [doCommitNormalInst [0]]       2776
+instret:315  PC:0x1ffff000000000000000000008000045c  instr:0x01b00193   iType:Alu    [doCommitNormalInst [1]]       2776
+Committing phy_reg: 107, to arch_reg: 29
+Freeing phy_reg: 82
+Committing phy_reg: 115, to arch_reg: 3
+Freeing phy_reg: 89
+instret:316  PC:0x1ffff0000000000000000000080000460  instr:0x19df1c63   iType:Br    [doCommitNormalInst [0]]       2777
+instret:317  PC:0x1ffff0000000000000000000080000464  instr:0x00000213   iType:Alu    [doCommitNormalInst [1]]       2777
+Freeing phy_reg: 83
+Committing phy_reg: 104, to arch_reg: 4
+Freeing phy_reg: 30
+instret:318  PC:0x1ffff0000000000000000000080000468  instr:0x00f00093   iType:Alu    [doCommitNormalInst [0]]       2778
+instret:319  PC:0x1ffff000000000000000000008000046c  instr:0x00000013   iType:Alu    [doCommitNormalInst [1]]       2778
+Committing phy_reg: 106, to arch_reg: 1
+Freeing phy_reg: 66
+Freeing phy_reg: 120
+instret:320  PC:0x1ffff0000000000000000000080000470  instr:0x00000013   iType:Alu    [doCommitNormalInst [0]]       2779
+instret:321  PC:0x1ffff0000000000000000000080000474  instr:0x00b00113   iType:Alu    [doCommitNormalInst [1]]       2779
+Freeing phy_reg: 101
+Committing phy_reg: 70, to arch_reg: 2
+Freeing phy_reg: 95
+instret:322  PC:0x1ffff0000000000000000000080000478  instr:0x00208f33   iType:Alu    [doCommitNormalInst [0]]       2780
+instret:323  PC:0x1ffff000000000000000000008000047c  instr:0x00120213   iType:Alu    [doCommitNormalInst [1]]       2780
+Committing phy_reg: 108, to arch_reg: 30
+Freeing phy_reg: 90
+Committing phy_reg: 111, to arch_reg: 4
+Freeing phy_reg: 104
+in-flight renaming arch_reg 69 to phy_reg 93, isMove: 0
+in-flight renaming arch_reg 5 to phy_reg 109, isMove: 0
+in-flight renaming arch_reg 65 to phy_reg 113, isMove: 0
+in-flight renaming arch_reg 0 to phy_reg 122, isMove: 0
+in-flight renaming arch_reg 0 to phy_reg 103, isMove: 0
+in-flight renaming arch_reg 66 to phy_reg 118, isMove: 0
+instret:324  PC:0x1ffff0000000000000000000080000480  instr:0x00200293   iType:Alu    [doCommitNormalInst [0]]       2832
+Committing phy_reg: 93, to arch_reg: 5
+Freeing phy_reg: 98
+in-flight renaming arch_reg 94 to phy_reg 2, isMove: 0
+in-flight renaming arch_reg 68 to phy_reg 126, isMove: 0
+instret:325  PC:0x1ffff0000000000000000000080000484  instr:0xfe5212e3   iType:Br    [doCommitNormalInst [0]]       2833
+Freeing phy_reg: 109
+in-flight renaming arch_reg 69 to phy_reg 110, isMove: 0
+in-flight renaming arch_reg 5 to phy_reg 112, isMove: 0
+instret:326  PC:0x1ffff0000000000000000000080000468  instr:0x00f00093   iType:Alu    [doCommitNormalInst [0]]       2835
+instret:327  PC:0x1ffff000000000000000000008000046c  instr:0x00000013   iType:Alu    [doCommitNormalInst [1]]       2835
+Committing phy_reg: 113, to arch_reg: 1
+Freeing phy_reg: 106
+Freeing phy_reg: 122
+instret:328  PC:0x1ffff0000000000000000000080000470  instr:0x00000013   iType:Alu    [doCommitNormalInst [0]]       2836
+instret:329  PC:0x1ffff0000000000000000000080000474  instr:0x00b00113   iType:Alu    [doCommitNormalInst [1]]       2836
+Freeing phy_reg: 103
+Committing phy_reg: 118, to arch_reg: 2
+Freeing phy_reg: 70
+in-flight renaming arch_reg 93 to phy_reg 117, isMove: 0
+in-flight renaming arch_reg 67 to phy_reg 11, isMove: 0
+instret:330  PC:0x1ffff0000000000000000000080000478  instr:0x00208f33   iType:Alu    [doCommitNormalInst [0]]       2837
+instret:331  PC:0x1ffff000000000000000000008000047c  instr:0x00120213   iType:Alu    [doCommitNormalInst [1]]       2837
+Committing phy_reg: 2, to arch_reg: 30
+Freeing phy_reg: 108
+Committing phy_reg: 126, to arch_reg: 4
+Freeing phy_reg: 111
+in-flight renaming arch_reg 8 to phy_reg 29, isMove: 0
+in-flight renaming arch_reg 68 to phy_reg 88, isMove: 0
+instret:332  PC:0x1ffff0000000000000000000080000480  instr:0x00200293   iType:Alu    [doCommitNormalInst [0]]       2838
+Committing phy_reg: 110, to arch_reg: 5
+Freeing phy_reg: 93
+in-flight renaming arch_reg 66 to phy_reg 125, isMove: 0
+in-flight renaming arch_reg 65 to phy_reg 127, isMove: 0
+instret:333  PC:0x1ffff0000000000000000000080000484  instr:0xfe5212e3   iType:Br    [doCommitNormalInst [0]]       2839
+Freeing phy_reg: 112
+in-flight renaming arch_reg 94 to phy_reg 105, isMove: 0
+in-flight renaming arch_reg 68 to phy_reg 114, isMove: 0
+in-flight renaming arch_reg 69 to phy_reg 5, isMove: 0
+in-flight renaming arch_reg 13 to phy_reg 119, isMove: 0
+instret:334  PC:0x1ffff0000000000000000000080000488  instr:0x01a00e93   iType:Alu    [doCommitNormalInst [0]]       2841
+instret:335  PC:0x1ffff000000000000000000008000048c  instr:0x01c00193   iType:Alu    [doCommitNormalInst [1]]       2841
+Committing phy_reg: 117, to arch_reg: 29
+Freeing phy_reg: 107
+Committing phy_reg: 11, to arch_reg: 3
+Freeing phy_reg: 115
+instret:336  PC:0x1ffff0000000000000000000080000490  instr:0x17df1463   iType:Br    [doCommitNormalInst [0]]       2842
+instret:337  PC:0x1ffff0000000000000000000080000494  instr:0x00000213   iType:Alu    [doCommitNormalInst [1]]       2842
+Freeing phy_reg: 29
+Committing phy_reg: 88, to arch_reg: 4
+Freeing phy_reg: 126
+instret:338  PC:0x1ffff0000000000000000000080000498  instr:0x00b00113   iType:Alu    [doCommitNormalInst [0]]       2843
+instret:339  PC:0x1ffff000000000000000000008000049c  instr:0x00d00093   iType:Alu    [doCommitNormalInst [1]]       2843
+Committing phy_reg: 125, to arch_reg: 2
+Freeing phy_reg: 118
+Committing phy_reg: 127, to arch_reg: 1
+Freeing phy_reg: 113
+in-flight renaming arch_reg 66 to phy_reg 121, isMove: 0
+in-flight renaming arch_reg 65 to phy_reg 79, isMove: 0
+instret:340  PC:0x1ffff00000000000000000000800004a0  instr:0x00208f33   iType:Alu    [doCommitNormalInst [0]]       2844
+instret:341  PC:0x1ffff00000000000000000000800004a4  instr:0x00120213   iType:Alu    [doCommitNormalInst [1]]       2844
+Committing phy_reg: 105, to arch_reg: 30
+Freeing phy_reg: 2
+Committing phy_reg: 114, to arch_reg: 4
+Freeing phy_reg: 88
+in-flight renaming arch_reg 94 to phy_reg 116, isMove: 0
+in-flight renaming arch_reg 68 to phy_reg 10, isMove: 0
+instret:342  PC:0x1ffff00000000000000000000800004a8  instr:0x00200293   iType:Alu    [doCommitNormalInst [0]]       2845
+Committing phy_reg: 5, to arch_reg: 5
+Freeing phy_reg: 110
+in-flight renaming arch_reg 69 to phy_reg 68, isMove: 0
+in-flight renaming arch_reg 13 to phy_reg 72, isMove: 0
+instret:343  PC:0x1ffff00000000000000000000800004ac  instr:0xfe5216e3   iType:Br    [doCommitNormalInst [0]]       2846
+Freeing phy_reg: 119
+instret:344  PC:0x1ffff0000000000000000000080000498  instr:0x00b00113   iType:Alu    [doCommitNormalInst [0]]       2848
+instret:345  PC:0x1ffff000000000000000000008000049c  instr:0x00d00093   iType:Alu    [doCommitNormalInst [1]]       2848
+Committing phy_reg: 121, to arch_reg: 2
+Freeing phy_reg: 125
+Committing phy_reg: 79, to arch_reg: 1
+Freeing phy_reg: 127
+in-flight renaming arch_reg 93 to phy_reg 123, isMove: 0
+in-flight renaming arch_reg 67 to phy_reg 67, isMove: 0
+instret:346  PC:0x1ffff00000000000000000000800004a0  instr:0x00208f33   iType:Alu    [doCommitNormalInst [0]]       2849
+instret:347  PC:0x1ffff00000000000000000000800004a4  instr:0x00120213   iType:Alu    [doCommitNormalInst [1]]       2849
+Committing phy_reg: 116, to arch_reg: 30
+Freeing phy_reg: 105
+Committing phy_reg: 10, to arch_reg: 4
+Freeing phy_reg: 114
+in-flight renaming arch_reg 0 to phy_reg 80, isMove: 0
+in-flight renaming arch_reg 68 to phy_reg 71, isMove: 0
+instret:348  PC:0x1ffff00000000000000000000800004a8  instr:0x00200293   iType:Alu    [doCommitNormalInst [0]]       2850
+Committing phy_reg: 68, to arch_reg: 5
+Freeing phy_reg: 5
+instret:349  PC:0x1ffff00000000000000000000800004ac  instr:0xfe5216e3   iType:Br    [doCommitNormalInst [0]]       2851
+Freeing phy_reg: 72
+instret:350  PC:0x1ffff00000000000000000000800004b0  instr:0x01800e93   iType:Alu    [doCommitNormalInst [0]]       2853
+instret:351  PC:0x1ffff00000000000000000000800004b4  instr:0x01d00193   iType:Alu    [doCommitNormalInst [1]]       2853
+Committing phy_reg: 123, to arch_reg: 29
+Freeing phy_reg: 117
+Committing phy_reg: 67, to arch_reg: 3
+Freeing phy_reg: 11
+instret:352  PC:0x1ffff00000000000000000000800004b8  instr:0x15df1063   iType:Br    [doCommitNormalInst [0]]       2854
+instret:353  PC:0x1ffff00000000000000000000800004bc  instr:0x00000213   iType:Alu    [doCommitNormalInst [1]]       2854
+Freeing phy_reg: 80
+Committing phy_reg: 71, to arch_reg: 4
+Freeing phy_reg: 10
+in-flight renaming arch_reg 66 to phy_reg 64, isMove: 0
+in-flight renaming arch_reg 65 to phy_reg 75, isMove: 0
+in-flight renaming arch_reg 0 to phy_reg 78, isMove: 0
+in-flight renaming arch_reg 94 to phy_reg 94, isMove: 0
+in-flight renaming arch_reg 68 to phy_reg 74, isMove: 0
+in-flight renaming arch_reg 69 to phy_reg 69, isMove: 0
+in-flight renaming arch_reg 9 to phy_reg 84, isMove: 0
+instret:354  PC:0x1ffff00000000000000000000800004c0  instr:0x00b00113   iType:Alu    [doCommitNormalInst [0]]       2906
+instret:355  PC:0x1ffff00000000000000000000800004c4  instr:0x00e00093   iType:Alu    [doCommitNormalInst [1]]       2906
+Committing phy_reg: 64, to arch_reg: 2
+Freeing phy_reg: 121
+Committing phy_reg: 75, to arch_reg: 1
+Freeing phy_reg: 79
+instret:356  PC:0x1ffff00000000000000000000800004c8  instr:0x00000013   iType:Alu    [doCommitNormalInst [0]]       2907
+instret:357  PC:0x1ffff00000000000000000000800004cc  instr:0x00208f33   iType:Alu    [doCommitNormalInst [1]]       2907
+Freeing phy_reg: 78
+Committing phy_reg: 94, to arch_reg: 30
+Freeing phy_reg: 116
+in-flight renaming arch_reg 66 to phy_reg 81, isMove: 0
+in-flight renaming arch_reg 65 to phy_reg 124, isMove: 0
+instret:358  PC:0x1ffff00000000000000000000800004d0  instr:0x00120213   iType:Alu    [doCommitNormalInst [0]]       2908
+instret:359  PC:0x1ffff00000000000000000000800004d4  instr:0x00200293   iType:Alu    [doCommitNormalInst [1]]       2908
+Committing phy_reg: 74, to arch_reg: 4
+Freeing phy_reg: 71
+Committing phy_reg: 69, to arch_reg: 5
+Freeing phy_reg: 68
+in-flight renaming arch_reg 0 to phy_reg 4, isMove: 0
+in-flight renaming arch_reg 94 to phy_reg 73, isMove: 0
+instret:360  PC:0x1ffff00000000000000000000800004d8  instr:0xfe5214e3   iType:Br    [doCommitNormalInst [0]]       2909
+Freeing phy_reg: 84
+in-flight renaming arch_reg 68 to phy_reg 99, isMove: 0
+in-flight renaming arch_reg 69 to phy_reg 76, isMove: 0
+in-flight renaming arch_reg 9 to phy_reg 92, isMove: 0
+instret:361  PC:0x1ffff00000000000000000000800004c0  instr:0x00b00113   iType:Alu    [doCommitNormalInst [0]]       2912
+instret:362  PC:0x1ffff00000000000000000000800004c4  instr:0x00e00093   iType:Alu    [doCommitNormalInst [1]]       2912
+Committing phy_reg: 81, to arch_reg: 2
+Freeing phy_reg: 64
+Committing phy_reg: 124, to arch_reg: 1
+Freeing phy_reg: 75
+instret:363  PC:0x1ffff00000000000000000000800004c8  instr:0x00000013   iType:Alu    [doCommitNormalInst [0]]       2913
+instret:364  PC:0x1ffff00000000000000000000800004cc  instr:0x00208f33   iType:Alu    [doCommitNormalInst [1]]       2913
+Freeing phy_reg: 4
+Committing phy_reg: 73, to arch_reg: 30
+Freeing phy_reg: 94
+in-flight renaming arch_reg 93 to phy_reg 77, isMove: 0
+in-flight renaming arch_reg 67 to phy_reg 100, isMove: 0
+instret:365  PC:0x1ffff00000000000000000000800004d0  instr:0x00120213   iType:Alu    [doCommitNormalInst [0]]       2914
+instret:366  PC:0x1ffff00000000000000000000800004d4  instr:0x00200293   iType:Alu    [doCommitNormalInst [1]]       2914
+Committing phy_reg: 99, to arch_reg: 4
+Freeing phy_reg: 74
+Committing phy_reg: 76, to arch_reg: 5
+Freeing phy_reg: 69
+in-flight renaming arch_reg 20 to phy_reg 91, isMove: 0
+in-flight renaming arch_reg 68 to phy_reg 6, isMove: 0
+instret:367  PC:0x1ffff00000000000000000000800004d8  instr:0xfe5214e3   iType:Br    [doCommitNormalInst [0]]       2915
+Freeing phy_reg: 92
+in-flight renaming arch_reg 66 to phy_reg 3, isMove: 0
+in-flight renaming arch_reg 65 to phy_reg 96, isMove: 0
+in-flight renaming arch_reg 0 to phy_reg 86, isMove: 0
+in-flight renaming arch_reg 0 to phy_reg 87, isMove: 0
+in-flight renaming arch_reg 94 to phy_reg 1, isMove: 0
+instret:368  PC:0x1ffff00000000000000000000800004dc  instr:0x01900e93   iType:Alu    [doCommitNormalInst [0]]       2918
+instret:369  PC:0x1ffff00000000000000000000800004e0  instr:0x01e00193   iType:Alu    [doCommitNormalInst [1]]       2918
+Committing phy_reg: 77, to arch_reg: 29
+Freeing phy_reg: 123
+Committing phy_reg: 100, to arch_reg: 3
+Freeing phy_reg: 67
+instret:370  PC:0x1ffff00000000000000000000800004e4  instr:0x11df1a63   iType:Br    [doCommitNormalInst [0]]       2919
+instret:371  PC:0x1ffff00000000000000000000800004e8  instr:0x00000213   iType:Alu    [doCommitNormalInst [1]]       2919
+Freeing phy_reg: 91
+Committing phy_reg: 6, to arch_reg: 4
+Freeing phy_reg: 99
+instret:372  PC:0x1ffff00000000000000000000800004ec  instr:0x00b00113   iType:Alu    [doCommitNormalInst [0]]       2920
+instret:373  PC:0x1ffff00000000000000000000800004f0  instr:0x00f00093   iType:Alu    [doCommitNormalInst [1]]       2920
+Committing phy_reg: 3, to arch_reg: 2
+Freeing phy_reg: 81
+Committing phy_reg: 96, to arch_reg: 1
+Freeing phy_reg: 124
+instret:374  PC:0x1ffff00000000000000000000800004f4  instr:0x00000013   iType:Alu    [doCommitNormalInst [0]]       2921
+instret:375  PC:0x1ffff00000000000000000000800004f8  instr:0x00000013   iType:Alu    [doCommitNormalInst [1]]       2921
+Freeing phy_reg: 86
+Freeing phy_reg: 87
+instret:376  PC:0x1ffff00000000000000000000800004fc  instr:0x00208f33   iType:Alu    [doCommitNormalInst [0]]       2922
+Committing phy_reg: 1, to arch_reg: 30
+Freeing phy_reg: 73
+in-flight renaming arch_reg 68 to phy_reg 97, isMove: 0
+in-flight renaming arch_reg 69 to phy_reg 82, isMove: 0
+in-flight renaming arch_reg 5 to phy_reg 89, isMove: 0
+in-flight renaming arch_reg 66 to phy_reg 83, isMove: 0
+in-flight renaming arch_reg 65 to phy_reg 30, isMove: 0
+instret:377  PC:0x1ffff0000000000000000000080000500  instr:0x00120213   iType:Alu    [doCommitNormalInst [0]]       2974
+instret:378  PC:0x1ffff0000000000000000000080000504  instr:0x00200293   iType:Alu    [doCommitNormalInst [1]]       2974
+Committing phy_reg: 97, to arch_reg: 4
+Freeing phy_reg: 6
+Committing phy_reg: 82, to arch_reg: 5
+Freeing phy_reg: 76
+in-flight renaming arch_reg 0 to phy_reg 66, isMove: 0
+in-flight renaming arch_reg 0 to phy_reg 120, isMove: 0
+instret:379  PC:0x1ffff0000000000000000000080000508  instr:0xfe5212e3   iType:Br    [doCommitNormalInst [0]]       2975
+Freeing phy_reg: 89
+in-flight renaming arch_reg 94 to phy_reg 101, isMove: 0
+in-flight renaming arch_reg 68 to phy_reg 95, isMove: 0
+in-flight renaming arch_reg 69 to phy_reg 90, isMove: 0
+in-flight renaming arch_reg 5 to phy_reg 104, isMove: 0
+instret:380  PC:0x1ffff00000000000000000000800004ec  instr:0x00b00113   iType:Alu    [doCommitNormalInst [0]]       2978
+instret:381  PC:0x1ffff00000000000000000000800004f0  instr:0x00f00093   iType:Alu    [doCommitNormalInst [1]]       2978
+Committing phy_reg: 83, to arch_reg: 2
+Freeing phy_reg: 3
+Committing phy_reg: 30, to arch_reg: 1
+Freeing phy_reg: 96
+instret:382  PC:0x1ffff00000000000000000000800004f4  instr:0x00000013   iType:Alu    [doCommitNormalInst [0]]       2979
+instret:383  PC:0x1ffff00000000000000000000800004f8  instr:0x00000013   iType:Alu    [doCommitNormalInst [1]]       2979
+Freeing phy_reg: 66
+Freeing phy_reg: 120
+instret:384  PC:0x1ffff00000000000000000000800004fc  instr:0x00208f33   iType:Alu    [doCommitNormalInst [0]]       2980
+Committing phy_reg: 101, to arch_reg: 30
+Freeing phy_reg: 1
+in-flight renaming arch_reg 93 to phy_reg 98, isMove: 0
+in-flight renaming arch_reg 67 to phy_reg 109, isMove: 0
+instret:385  PC:0x1ffff0000000000000000000080000500  instr:0x00120213   iType:Alu    [doCommitNormalInst [0]]       2981
+instret:386  PC:0x1ffff0000000000000000000080000504  instr:0x00200293   iType:Alu    [doCommitNormalInst [1]]       2981
+Committing phy_reg: 95, to arch_reg: 4
+Freeing phy_reg: 97
+Committing phy_reg: 90, to arch_reg: 5
+Freeing phy_reg: 82
+in-flight renaming arch_reg 4 to phy_reg 106, isMove: 0
+in-flight renaming arch_reg 68 to phy_reg 122, isMove: 0
+instret:387  PC:0x1ffff0000000000000000000080000508  instr:0xfe5212e3   iType:Br    [doCommitNormalInst [0]]       2982
+Freeing phy_reg: 104
+in-flight renaming arch_reg 66 to phy_reg 103, isMove: 0
+in-flight renaming arch_reg 0 to phy_reg 70, isMove: 0
+in-flight renaming arch_reg 65 to phy_reg 108, isMove: 0
+in-flight renaming arch_reg 94 to phy_reg 111, isMove: 0
+in-flight renaming arch_reg 68 to phy_reg 93, isMove: 0
+in-flight renaming arch_reg 69 to phy_reg 112, isMove: 0
+instret:388  PC:0x1ffff000000000000000000008000050c  instr:0x01a00e93   iType:Alu    [doCommitNormalInst [0]]       2985
+instret:389  PC:0x1ffff0000000000000000000080000510  instr:0x01f00193   iType:Alu    [doCommitNormalInst [1]]       2985
+Committing phy_reg: 98, to arch_reg: 29
+Freeing phy_reg: 77
+Committing phy_reg: 109, to arch_reg: 3
+Freeing phy_reg: 100
+in-flight renaming arch_reg 9 to phy_reg 107, isMove: 0
+instret:390  PC:0x1ffff0000000000000000000080000514  instr:0x0fdf1263   iType:Br    [doCommitNormalInst [0]]       2986
+instret:391  PC:0x1ffff0000000000000000000080000518  instr:0x00000213   iType:Alu    [doCommitNormalInst [1]]       2986
+Freeing phy_reg: 106
+Committing phy_reg: 122, to arch_reg: 4
+Freeing phy_reg: 95
+instret:392  PC:0x1ffff000000000000000000008000051c  instr:0x00b00113   iType:Alu    [doCommitNormalInst [0]]       2987
+instret:393  PC:0x1ffff0000000000000000000080000520  instr:0x00000013   iType:Alu    [doCommitNormalInst [1]]       2987
+Committing phy_reg: 103, to arch_reg: 2
+Freeing phy_reg: 83
+Freeing phy_reg: 70
+instret:394  PC:0x1ffff0000000000000000000080000524  instr:0x00d00093   iType:Alu    [doCommitNormalInst [0]]       2988
+Committing phy_reg: 108, to arch_reg: 1
+Freeing phy_reg: 30
+instret:395  PC:0x1ffff0000000000000000000080000528  instr:0x00208f33   iType:Alu    [doCommitNormalInst [0]]       2989
+instret:396  PC:0x1ffff000000000000000000008000052c  instr:0x00120213   iType:Alu    [doCommitNormalInst [1]]       2989
+Committing phy_reg: 111, to arch_reg: 30
+Freeing phy_reg: 101
+Committing phy_reg: 93, to arch_reg: 4
+Freeing phy_reg: 122
+instret:397  PC:0x1ffff0000000000000000000080000530  instr:0x00200293   iType:Alu    [doCommitNormalInst [0]]       2990
+Committing phy_reg: 112, to arch_reg: 5
+Freeing phy_reg: 90
+instret:398  PC:0x1ffff0000000000000000000080000534  instr:0xfe5214e3   iType:Br    [doCommitNormalInst [0]]       2991
+Freeing phy_reg: 107
+in-flight renaming arch_reg 66 to phy_reg 115, isMove: 0
+in-flight renaming arch_reg 0 to phy_reg 29, isMove: 0
+in-flight renaming arch_reg 65 to phy_reg 126, isMove: 0
+in-flight renaming arch_reg 94 to phy_reg 118, isMove: 0
+in-flight renaming arch_reg 68 to phy_reg 113, isMove: 0
+in-flight renaming arch_reg 69 to phy_reg 2, isMove: 0
+in-flight renaming arch_reg 9 to phy_reg 88, isMove: 0
+instret:399  PC:0x1ffff000000000000000000008000051c  instr:0x00b00113   iType:Alu    [doCommitNormalInst [0]]       3044
+instret:400  PC:0x1ffff0000000000000000000080000520  instr:0x00000013   iType:Alu    [doCommitNormalInst [1]]       3044
+Committing phy_reg: 115, to arch_reg: 2
+Freeing phy_reg: 103
+Freeing phy_reg: 29
+instret:401  PC:0x1ffff0000000000000000000080000524  instr:0x00d00093   iType:Alu    [doCommitNormalInst [0]]       3045
+Committing phy_reg: 126, to arch_reg: 1
+Freeing phy_reg: 108
+in-flight renaming arch_reg 93 to phy_reg 110, isMove: 0
+in-flight renaming arch_reg 67 to phy_reg 119, isMove: 0
+instret:402  PC:0x1ffff0000000000000000000080000528  instr:0x00208f33   iType:Alu    [doCommitNormalInst [0]]       3046
+instret:403  PC:0x1ffff000000000000000000008000052c  instr:0x00120213   iType:Alu    [doCommitNormalInst [1]]       3046
+Committing phy_reg: 118, to arch_reg: 30
+Freeing phy_reg: 111
+Committing phy_reg: 113, to arch_reg: 4
+Freeing phy_reg: 93
+in-flight renaming arch_reg 24 to phy_reg 125, isMove: 0
+in-flight renaming arch_reg 68 to phy_reg 127, isMove: 0
+instret:404  PC:0x1ffff0000000000000000000080000530  instr:0x00200293   iType:Alu    [doCommitNormalInst [0]]       3047
+Committing phy_reg: 2, to arch_reg: 5
+Freeing phy_reg: 112
+in-flight renaming arch_reg 66 to phy_reg 105, isMove: 0
+in-flight renaming arch_reg 0 to phy_reg 114, isMove: 0
+instret:405  PC:0x1ffff0000000000000000000080000534  instr:0xfe5214e3   iType:Br    [doCommitNormalInst [0]]       3048
+Freeing phy_reg: 88
+in-flight renaming arch_reg 65 to phy_reg 5, isMove: 0
+in-flight renaming arch_reg 0 to phy_reg 72, isMove: 0
+in-flight renaming arch_reg 94 to phy_reg 117, isMove: 0
+in-flight renaming arch_reg 68 to phy_reg 11, isMove: 0
+instret:406  PC:0x1ffff0000000000000000000080000538  instr:0x01800e93   iType:Alu    [doCommitNormalInst [0]]       3050
+instret:407  PC:0x1ffff000000000000000000008000053c  instr:0x02000193   iType:Alu    [doCommitNormalInst [1]]       3050
+Committing phy_reg: 110, to arch_reg: 29
+Freeing phy_reg: 98
+Committing phy_reg: 119, to arch_reg: 3
+Freeing phy_reg: 109
+in-flight renaming arch_reg 69 to phy_reg 80, isMove: 0
+in-flight renaming arch_reg 5 to phy_reg 10, isMove: 0
+instret:408  PC:0x1ffff0000000000000000000080000540  instr:0x0bdf1c63   iType:Br    [doCommitNormalInst [0]]       3051
+instret:409  PC:0x1ffff0000000000000000000080000544  instr:0x00000213   iType:Alu    [doCommitNormalInst [1]]       3051
+Freeing phy_reg: 125
+Committing phy_reg: 127, to arch_reg: 4
+Freeing phy_reg: 113
+instret:410  PC:0x1ffff0000000000000000000080000548  instr:0x00b00113   iType:Alu    [doCommitNormalInst [0]]       3052
+instret:411  PC:0x1ffff000000000000000000008000054c  instr:0x00000013   iType:Alu    [doCommitNormalInst [1]]       3052
+Committing phy_reg: 105, to arch_reg: 2
+Freeing phy_reg: 115
+Freeing phy_reg: 114
+instret:412  PC:0x1ffff0000000000000000000080000550  instr:0x00e00093   iType:Alu    [doCommitNormalInst [0]]       3053
+instret:413  PC:0x1ffff0000000000000000000080000554  instr:0x00000013   iType:Alu    [doCommitNormalInst [1]]       3053
+Committing phy_reg: 5, to arch_reg: 1
+Freeing phy_reg: 126
+Freeing phy_reg: 72
+in-flight renaming arch_reg 66 to phy_reg 121, isMove: 0
+in-flight renaming arch_reg 0 to phy_reg 79, isMove: 0
+instret:414  PC:0x1ffff0000000000000000000080000558  instr:0x00208f33   iType:Alu    [doCommitNormalInst [0]]       3054
+instret:415  PC:0x1ffff000000000000000000008000055c  instr:0x00120213   iType:Alu    [doCommitNormalInst [1]]       3054
+Committing phy_reg: 117, to arch_reg: 30
+Freeing phy_reg: 118
+Committing phy_reg: 11, to arch_reg: 4
+Freeing phy_reg: 127
+in-flight renaming arch_reg 65 to phy_reg 78, isMove: 0
+in-flight renaming arch_reg 0 to phy_reg 116, isMove: 0
+instret:416  PC:0x1ffff0000000000000000000080000560  instr:0x00200293   iType:Alu    [doCommitNormalInst [0]]       3055
+Committing phy_reg: 80, to arch_reg: 5
+Freeing phy_reg: 2
+in-flight renaming arch_reg 94 to phy_reg 71, isMove: 0
+in-flight renaming arch_reg 68 to phy_reg 68, isMove: 0
+instret:417  PC:0x1ffff0000000000000000000080000564  instr:0xfe5212e3   iType:Br    [doCommitNormalInst [0]]       3056
+Freeing phy_reg: 10
+in-flight renaming arch_reg 69 to phy_reg 84, isMove: 0
+in-flight renaming arch_reg 5 to phy_reg 64, isMove: 0
+instret:418  PC:0x1ffff0000000000000000000080000548  instr:0x00b00113   iType:Alu    [doCommitNormalInst [0]]       3058
+instret:419  PC:0x1ffff000000000000000000008000054c  instr:0x00000013   iType:Alu    [doCommitNormalInst [1]]       3058
+Committing phy_reg: 121, to arch_reg: 2
+Freeing phy_reg: 105
+Freeing phy_reg: 79
+instret:420  PC:0x1ffff0000000000000000000080000550  instr:0x00e00093   iType:Alu    [doCommitNormalInst [0]]       3059
+instret:421  PC:0x1ffff0000000000000000000080000554  instr:0x00000013   iType:Alu    [doCommitNormalInst [1]]       3059
+Committing phy_reg: 78, to arch_reg: 1
+Freeing phy_reg: 5
+Freeing phy_reg: 116
+in-flight renaming arch_reg 93 to phy_reg 75, isMove: 0
+in-flight renaming arch_reg 67 to phy_reg 4, isMove: 0
+instret:422  PC:0x1ffff0000000000000000000080000558  instr:0x00208f33   iType:Alu    [doCommitNormalInst [0]]       3060
+instret:423  PC:0x1ffff000000000000000000008000055c  instr:0x00120213   iType:Alu    [doCommitNormalInst [1]]       3060
+Committing phy_reg: 71, to arch_reg: 30
+Freeing phy_reg: 117
+Committing phy_reg: 68, to arch_reg: 4
+Freeing phy_reg: 11
+in-flight renaming arch_reg 8 to phy_reg 94, isMove: 0
+in-flight renaming arch_reg 68 to phy_reg 74, isMove: 0
+instret:424  PC:0x1ffff0000000000000000000080000560  instr:0x00200293   iType:Alu    [doCommitNormalInst [0]]       3061
+Committing phy_reg: 84, to arch_reg: 5
+Freeing phy_reg: 80
+in-flight renaming arch_reg 66 to phy_reg 69, isMove: 0
+in-flight renaming arch_reg 0 to phy_reg 92, isMove: 0
+instret:425  PC:0x1ffff0000000000000000000080000564  instr:0xfe5212e3   iType:Br    [doCommitNormalInst [0]]       3062
+Freeing phy_reg: 64
+instret:426  PC:0x1ffff0000000000000000000080000568  instr:0x01900e93   iType:Alu    [doCommitNormalInst [0]]       3064
+instret:427  PC:0x1ffff000000000000000000008000056c  instr:0x02100193   iType:Alu    [doCommitNormalInst [1]]       3064
+Committing phy_reg: 75, to arch_reg: 29
+Freeing phy_reg: 110
+Committing phy_reg: 4, to arch_reg: 3
+Freeing phy_reg: 119
+instret:428  PC:0x1ffff0000000000000000000080000570  instr:0x09df1463   iType:Br    [doCommitNormalInst [0]]       3065
+instret:429  PC:0x1ffff0000000000000000000080000574  instr:0x00000213   iType:Alu    [doCommitNormalInst [1]]       3065
+Freeing phy_reg: 94
+Committing phy_reg: 74, to arch_reg: 4
+Freeing phy_reg: 68
+instret:430  PC:0x1ffff0000000000000000000080000578  instr:0x00b00113   iType:Alu    [doCommitNormalInst [0]]       3066
+instret:431  PC:0x1ffff000000000000000000008000057c  instr:0x00000013   iType:Alu    [doCommitNormalInst [1]]       3066
+Committing phy_reg: 69, to arch_reg: 2
+Freeing phy_reg: 121
+Freeing phy_reg: 92
+in-flight renaming arch_reg 0 to phy_reg 123, isMove: 0
+in-flight renaming arch_reg 65 to phy_reg 67, isMove: 0
+in-flight renaming arch_reg 94 to phy_reg 91, isMove: 0
+in-flight renaming arch_reg 68 to phy_reg 99, isMove: 0
+in-flight renaming arch_reg 69 to phy_reg 81, isMove: 0
+in-flight renaming arch_reg 5 to phy_reg 124, isMove: 0
+instret:432  PC:0x1ffff0000000000000000000080000580  instr:0x00000013   iType:Alu    [doCommitNormalInst [0]]       3118
+instret:433  PC:0x1ffff0000000000000000000080000584  instr:0x00f00093   iType:Alu    [doCommitNormalInst [1]]       3118
+Freeing phy_reg: 123
+Committing phy_reg: 67, to arch_reg: 1
+Freeing phy_reg: 78
+in-flight renaming arch_reg 66 to phy_reg 86, isMove: 0
+in-flight renaming arch_reg 0 to phy_reg 87, isMove: 0
+instret:434  PC:0x1ffff0000000000000000000080000588  instr:0x00208f33   iType:Alu    [doCommitNormalInst [0]]       3119
+instret:435  PC:0x1ffff000000000000000000008000058c  instr:0x00120213   iType:Alu    [doCommitNormalInst [1]]       3119
+Committing phy_reg: 91, to arch_reg: 30
+Freeing phy_reg: 71
+Committing phy_reg: 99, to arch_reg: 4
+Freeing phy_reg: 74
+in-flight renaming arch_reg 0 to phy_reg 73, isMove: 0
+in-flight renaming arch_reg 65 to phy_reg 6, isMove: 0
+instret:436  PC:0x1ffff0000000000000000000080000590  instr:0x00200293   iType:Alu    [doCommitNormalInst [0]]       3120
+Committing phy_reg: 81, to arch_reg: 5
+Freeing phy_reg: 84
+in-flight renaming arch_reg 94 to phy_reg 76, isMove: 0
+in-flight renaming arch_reg 68 to phy_reg 89, isMove: 0
+instret:437  PC:0x1ffff0000000000000000000080000594  instr:0xfe5212e3   iType:Br    [doCommitNormalInst [0]]       3121
+Freeing phy_reg: 124
+in-flight renaming arch_reg 69 to phy_reg 3, isMove: 0
+in-flight renaming arch_reg 5 to phy_reg 96, isMove: 0
+instret:438  PC:0x1ffff0000000000000000000080000578  instr:0x00b00113   iType:Alu    [doCommitNormalInst [0]]       3123
+instret:439  PC:0x1ffff000000000000000000008000057c  instr:0x00000013   iType:Alu    [doCommitNormalInst [1]]       3123
+Committing phy_reg: 86, to arch_reg: 2
+Freeing phy_reg: 69
+Freeing phy_reg: 87
+instret:440  PC:0x1ffff0000000000000000000080000580  instr:0x00000013   iType:Alu    [doCommitNormalInst [0]]       3124
+instret:441  PC:0x1ffff0000000000000000000080000584  instr:0x00f00093   iType:Alu    [doCommitNormalInst [1]]       3124
+Freeing phy_reg: 73
+Committing phy_reg: 6, to arch_reg: 1
+Freeing phy_reg: 67
+in-flight renaming arch_reg 93 to phy_reg 66, isMove: 0
+in-flight renaming arch_reg 67 to phy_reg 120, isMove: 0
+instret:442  PC:0x1ffff0000000000000000000080000588  instr:0x00208f33   iType:Alu    [doCommitNormalInst [0]]       3125
+instret:443  PC:0x1ffff000000000000000000008000058c  instr:0x00120213   iType:Alu    [doCommitNormalInst [1]]       3125
+Committing phy_reg: 76, to arch_reg: 30
+Freeing phy_reg: 91
+Committing phy_reg: 89, to arch_reg: 4
+Freeing phy_reg: 99
+in-flight renaming arch_reg 24 to phy_reg 1, isMove: 0
+in-flight renaming arch_reg 65 to phy_reg 97, isMove: 0
+instret:444  PC:0x1ffff0000000000000000000080000590  instr:0x00200293   iType:Alu    [doCommitNormalInst [0]]       3126
+Committing phy_reg: 3, to arch_reg: 5
+Freeing phy_reg: 81
+in-flight renaming arch_reg 66 to phy_reg 82, isMove: 0
+in-flight renaming arch_reg 93 to phy_reg 104, isMove: 0
+instret:445  PC:0x1ffff0000000000000000000080000594  instr:0xfe5212e3   iType:Br    [doCommitNormalInst [0]]       3127
+Freeing phy_reg: 96
+in-flight renaming arch_reg 67 to phy_reg 77, isMove: 0
+in-flight renaming arch_reg 4 to phy_reg 100, isMove: 0
+instret:446  PC:0x1ffff0000000000000000000080000598  instr:0x01a00e93   iType:Alu    [doCommitNormalInst [0]]       3129
+instret:447  PC:0x1ffff000000000000000000008000059c  instr:0x02200193   iType:Alu    [doCommitNormalInst [1]]       3129
+Committing phy_reg: 66, to arch_reg: 29
+Freeing phy_reg: 75
+Committing phy_reg: 120, to arch_reg: 3
+Freeing phy_reg: 4
+instret:448  PC:0x1ffff00000000000000000000800005a0  instr:0x05df1c63   iType:Br    [doCommitNormalInst [0]]       3130
+instret:449  PC:0x1ffff00000000000000000000800005a4  instr:0x00f00093   iType:Alu    [doCommitNormalInst [1]]       3130
+Freeing phy_reg: 1
+Committing phy_reg: 97, to arch_reg: 1
+Freeing phy_reg: 6
+instret:450  PC:0x1ffff00000000000000000000800005a8  instr:0x00100133   iType:Alu    [doCommitNormalInst [0]]       3131
+instret:451  PC:0x1ffff00000000000000000000800005ac  instr:0x00f00e93   iType:Alu    [doCommitNormalInst [1]]       3131
+Committing phy_reg: 82, to arch_reg: 2
+Freeing phy_reg: 86
+Committing phy_reg: 104, to arch_reg: 29
+Freeing phy_reg: 66
+instret:452  PC:0x1ffff00000000000000000000800005b0  instr:0x02300193   iType:Alu    [doCommitNormalInst [0]]       3133
+instret:453  PC:0x1ffff00000000000000000000800005b4  instr:0x05d11263   iType:Br    [doCommitNormalInst [1]]       3133
+Committing phy_reg: 77, to arch_reg: 3
+Freeing phy_reg: 120
+Freeing phy_reg: 100
+in-flight renaming arch_reg 65 to phy_reg 106, isMove: 0
+in-flight renaming arch_reg 66 to phy_reg 95, isMove: 0
+in-flight renaming arch_reg 93 to phy_reg 83, isMove: 0
+in-flight renaming arch_reg 67 to phy_reg 70, isMove: 0
+in-flight renaming arch_reg 16 to phy_reg 30, isMove: 0
+in-flight renaming arch_reg 65 to phy_reg 101, isMove: 0
+in-flight renaming arch_reg 93 to phy_reg 122, isMove: 0
+in-flight renaming arch_reg 67 to phy_reg 90, isMove: 0
+in-flight renaming arch_reg 0 to phy_reg 107, isMove: 0
+in-flight renaming arch_reg 65 to phy_reg 103, isMove: 0
+instret:454  PC:0x1ffff00000000000000000000800005b8  instr:0x02000093   iType:Alu    [doCommitNormalInst [0]]       3187
+Committing phy_reg: 106, to arch_reg: 1
+Freeing phy_reg: 97
+in-flight renaming arch_reg 66 to phy_reg 29, isMove: 0
+in-flight renaming arch_reg 0 to phy_reg 108, isMove: 0
+instret:455  PC:0x1ffff00000000000000000000800005bc  instr:0x00008133   iType:Alu    [doCommitNormalInst [0]]       3188
+instret:456  PC:0x1ffff00000000000000000000800005c0  instr:0x02000e93   iType:Alu    [doCommitNormalInst [1]]       3188
+Committing phy_reg: 95, to arch_reg: 2
+Freeing phy_reg: 82
+Committing phy_reg: 83, to arch_reg: 29
+Freeing phy_reg: 104
+in-flight renaming arch_reg 93 to phy_reg 111, isMove: 0
+in-flight renaming arch_reg 67 to phy_reg 93, isMove: 0
+instret:457  PC:0x1ffff00000000000000000000800005c4  instr:0x02400193   iType:Alu    [doCommitNormalInst [0]]       3189
+instret:458  PC:0x1ffff00000000000000000000800005c8  instr:0x03d11863   iType:Br    [doCommitNormalInst [1]]       3189
+Committing phy_reg: 70, to arch_reg: 3
+Freeing phy_reg: 77
+Freeing phy_reg: 30
+in-flight renaming arch_reg 8 to phy_reg 112, isMove: 0
+instret:459  PC:0x1ffff00000000000000000000800005cc  instr:0x000000b3   iType:Alu    [doCommitNormalInst [0]]       3190
+instret:460  PC:0x1ffff00000000000000000000800005d0  instr:0x00000e93   iType:Alu    [doCommitNormalInst [1]]       3190
+Committing phy_reg: 101, to arch_reg: 1
+Freeing phy_reg: 106
+Committing phy_reg: 122, to arch_reg: 29
+Freeing phy_reg: 83
+in-flight renaming arch_reg 24 to phy_reg 88, isMove: 0
+in-flight renaming arch_reg 0 to phy_reg 98, isMove: 0
+instret:461  PC:0x1ffff00000000000000000000800005d4  instr:0x02500193   iType:Alu    [doCommitNormalInst [0]]       3191
+instret:462  PC:0x1ffff00000000000000000000800005d8  instr:0x03d09063   iType:Br    [doCommitNormalInst [1]]       3191
+Committing phy_reg: 90, to arch_reg: 3
+Freeing phy_reg: 70
+Freeing phy_reg: 107
+in-flight renaming arch_reg 0 to phy_reg 109, isMove: 0
+instret:463  PC:0x1ffff00000000000000000000800005dc  instr:0x01000093   iType:Alu    [doCommitNormalInst [0]]       3192
+instret:464  PC:0x1ffff00000000000000000000800005e0  instr:0x01e00113   iType:Alu    [doCommitNormalInst [1]]       3192
+Committing phy_reg: 103, to arch_reg: 1
+Freeing phy_reg: 101
+Committing phy_reg: 29, to arch_reg: 2
+Freeing phy_reg: 95
+instret:465  PC:0x1ffff00000000000000000000800005e4  instr:0x00208033   iType:Alu    [doCommitNormalInst [0]]       3193
+instret:466  PC:0x1ffff00000000000000000000800005e8  instr:0x00000e93   iType:Alu    [doCommitNormalInst [1]]       3193
+Freeing phy_reg: 108
+Committing phy_reg: 111, to arch_reg: 29
+Freeing phy_reg: 122
+instret:467  PC:0x1ffff00000000000000000000800005ec  instr:0x02600193   iType:Alu    [doCommitNormalInst [0]]       3194
+instret:468  PC:0x1ffff00000000000000000000800005f0  instr:0x01d01463   iType:Br    [doCommitNormalInst [1]]       3194
+Committing phy_reg: 93, to arch_reg: 3
+Freeing phy_reg: 90
+Freeing phy_reg: 112
+instret:469  PC:0x1ffff00000000000000000000800005f4  instr:0x00301c63   iType:Br    [doCommitNormalInst [0]]       3196
+Freeing phy_reg: 88
+in-flight renaming arch_reg 0 to phy_reg 98, isMove: 0
+in-flight renaming arch_reg 67 to phy_reg 109, isMove: 0
+instret:470  PC:0x1ffff000000000000000000008000060c  instr:0x0ff0000f   iType:Fence    [doCommitNormalInst [0]]       3247
+Freeing phy_reg: 98
+instret:471  PC:0x1ffff0000000000000000000080000610  instr:0x00100193   iType:Alu    [doCommitNormalInst [0]]       3249
+Committing phy_reg: 109, to arch_reg: 3
+Freeing phy_reg: 93
+instret:472  PC:0x1ffff0000000000000000000080000614  instr:0x00000073  iType:Ecall    [doCommitTrap]       3251
+in-flight renaming arch_reg 94 to phy_reg 125, isMove: 0
+instret:473  PC:0x1ffff0000000000000000000080000004  instr:0x34202f73   iType:Csr    [doCommitSystemInst]       3308
+Committing phy_reg: 125, to arch_reg: 30
+Freeing phy_reg: 76
+in-flight renaming arch_reg 95 to phy_reg 113, isMove: 0
+in-flight renaming arch_reg 20 to phy_reg 115, isMove: 0
+in-flight renaming arch_reg 95 to phy_reg 114, isMove: 0
+in-flight renaming arch_reg 12 to phy_reg 126, isMove: 0
+in-flight renaming arch_reg 95 to phy_reg 72, isMove: 0
+in-flight renaming arch_reg 4 to phy_reg 118, isMove: 0
+in-flight renaming arch_reg 94 to phy_reg 127, isMove: 0
+in-flight renaming arch_reg 94 to phy_reg 2, isMove: 0
+in-flight renaming arch_reg 8 to phy_reg 10, isMove: 0
+instret:474  PC:0x1ffff0000000000000000000080000008  instr:0x00800f93   iType:Alu    [doCommitNormalInst [0]]       3320
+Committing phy_reg: 113, to arch_reg: 31
+Freeing phy_reg: 31
+instret:475  PC:0x1ffff000000000000000000008000000c  instr:0x03ff0a63   iType:Br    [doCommitNormalInst [0]]       3322
+Freeing phy_reg: 115
+in-flight renaming arch_reg 94 to phy_reg 114, isMove: 0
+in-flight renaming arch_reg 0 to phy_reg 126, isMove: 0
+in-flight renaming arch_reg 0 to phy_reg 72, isMove: 0
+in-flight renaming arch_reg 94 to phy_reg 118, isMove: 0
+in-flight renaming arch_reg 0 to phy_reg 127, isMove: 0
+instret:476  PC:0x1ffff0000000000000000000080000040  instr:0x00001f17   iType:Auipc    [doCommitNormalInst [0]]       3330
+Committing phy_reg: 114, to arch_reg: 30
+Freeing phy_reg: 125
+in-flight renaming arch_reg 0 to phy_reg 2, isMove: 0
+in-flight renaming arch_reg 94 to phy_reg 10, isMove: 0
+in-flight renaming arch_reg 0 to phy_reg 105, isMove: 0
+in-flight renaming arch_reg 0 to phy_reg 79, isMove: 0
+in-flight renaming arch_reg 94 to phy_reg 5, isMove: 0
+in-flight renaming arch_reg 0 to phy_reg 116, isMove: 0
+3336: mmioPlatform.rl_tohost: 0x1 (= 1)
+PASS
